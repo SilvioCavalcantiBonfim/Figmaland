@@ -1,1 +1,55 @@
-
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://use.typekit.net/uqa5wbu.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/src/entity/serie.class.js"></script>
+    <script src="/src/main.js"></script>
+    <title>Fséries</title>
+  </head>
+  <body class="bg-black" onload="onInit()">
+    <div class="w-100 position-relative d-block ratio-16x9">
+      <div class="container d-grid">
+        <div class="row mt-3 ">
+          <div class="col-6 d-flex align-items-end gap-5">
+            <div class="title"><span>F</span>séries</div>
+            <nav class="d-md-flex gap-4 nav d-none">
+              <a href=""><span>Início</span></a>
+              <a href=""><span>Séries</span></a>
+              <a href=""><span>Kids</span></a>
+            </nav>
+          </div>
+          <div class="col-6 bg-warning"></div>
+        </div>
+      </div>
+      <figure id="background"></figure>
+      <div
+        class="w-100"
+        style="
+          height: 100px;
+          background: linear-gradient(
+            360deg,
+            #000 0%,
+            rgba(0, 0, 0, 0.85) 24.06%,
+            rgba(0, 0, 0, 0.76) 48.47%,
+            rgba(0, 0, 0, 0.53) 75.48%,
+            rgba(0, 0, 0, 0.03) 100%
+          );
+        "
+      ></div>
+    </div>
+  </body>
+</html>
