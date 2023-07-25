@@ -7,3 +7,7 @@ function onInit() {
   const background = document.getElementById('background');
   background.style.background = `url(${currentSerie.img}) lightgray 50% / cover no-repeat`;
 }
+
+function focusIn(id) {
+  document.getElementById(id).focus();
+}

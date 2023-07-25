@@ -21,22 +21,56 @@
     <title>Fséries</title>
   </head>
   <body class="bg-black" onload="onInit()">
-    <div class="w-100 position-relative d-block ratio-16x9">
-      <div class="container d-grid">
-        <div class="row mt-3 ">
-          <div class="col-6 d-flex align-items-end gap-5">
-            <div class="title"><span>F</span>séries</div>
-            <nav class="d-md-flex gap-4 nav d-none">
-              <a href=""><span>Início</span></a>
-              <a href=""><span>Séries</span></a>
-              <a href=""><span>Kids</span></a>
-            </nav>
-          </div>
-          <div class="col-6 bg-warning"></div>
-        </div>
+    <div class="w-100 mt-2 position-relative d-flex justify-content-between  container ratio-16x9">
+      <div class="d-flex align-items-end gap-5 mt-3 min-content">
+        <div class="title"><span>F</span>séries</div>
+        <nav class="d-md-flex gap-4 nav d-none">
+          <ul class="d-flex gap-4 list-unstyled m-0">
+            <a href="#">
+              <li>Início</li>
+            </a>
+            <a href="#">
+              <li>Séries</li>
+            </a>
+            <a href="#">
+              <li>Kids</li>
+            </a>
+          </ul>
+        </nav>
       </div>
+      <div class="d-flex align-items-center justify-content-end min-content">
+        <div class="d-flex search_container border-0">
+              <input class="bg-transparent flex-grow-1 " id="search" type="search" placeholder="titulos, séries e genêros"/>
+              <button class="bg-transparent border-0" onclick="focusIn('search')">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M21 21L16.65 16.65"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+        </div>
+        <div>profile</div>
+      </div>
+    </div>
       <figure id="background"></figure>
-      <div
+      <!-- <div
         class="w-100"
         style="
           height: 100px;
@@ -49,7 +83,7 @@
             rgba(0, 0, 0, 0.03) 100%
           );
         "
-      ></div>
+      ></div> -->
     </div>
   </body>
 </html>
