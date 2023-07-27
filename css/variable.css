@@ -1,0 +1,13 @@
+:root{
+  --primary: #2091F9;
+  --text: #252B42;
+  --second-text: #374754;
+}
+
+.text{
+  color: var(--text) !important;
+}
+
+.second-text{
+  color: var(--second-text) !important;
+}
