@@ -2,38 +2,85 @@
   font-family: Graphik, sans-serif;
 }
 
-h2, h4,.button {
-  text-align: center;
-  padding: 0.625rem;
+p,
+h2,
+h4,
+input[type="email"],
+button {
   font-family: Graphik;
+  padding: 0.625rem;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.0125rem;
   margin: 0 !important;
 }
 
-.button{
+h6 {
+  font-family: Graphik;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4375rem;
+  letter-spacing: 0.00625rem;
+}
+
+
+button {
   background-color: var(--primary);
   font-size: 1.25rem;
   line-height: 1.25rem;
   max-width: 14.75rem;
+  padding: 1rem 0;
+  width: 100%;
+  border: 0;
+  text-align: center;
+  border-radius: var(--bs-border-radius-pill) !important;
 }
 
-nav{
+.try {
+  font-weight: 700 !important;
+}
+
+p {
+  line-height: 1.5625rem;
+  font-size: 1.125rem;
+  padding: 0 0.625rem;
+}
+
+nav {
   padding: 1.0625rem 1rem;
 }
 
-h2{
+h2 {
   font-size: 3rem;
   line-height: 3.4375rem;
 }
 
-h4{
+h3 {
+  font-family: Graphik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+  padding: 0.625rem;
+  margin: 0;
+}
+
+h4 {
   font-size: 1.75rem;
   line-height: 2.5rem;
 }
 
-.text_content{
+.gap-10 {
+  gap: 0.625rem;
+}
+
+.p-10 {
+  padding: 0.625rem;
+}
+
+.text_content {
   gap: 0.4375rem;
 }
 
@@ -44,26 +91,91 @@ h4{
   background-size: contain;
 }
 
-.home__container {
-  padding: 5rem 1.25rem;
+._container {
+  padding: 2.5rem 1.25rem;
   gap: 3.6875rem;
 }
 
-.features__container{
+.features__container {
   padding: 5rem 0;
   gap: 3.125rem;
 }
-.feactures__text__content{
+
+.feactures__text__content {
   gap: 0.4375rem;
   max-width: 17.8125rem;
 }
 
-.video{
+.video {
   box-sizing: content-box;
+  aspect-ratio: 385.887 / 215.766;
 }
-.video__button{
+
+.video video {
+  border-radius: 1.6690625rem;
+}
+
+.video__button {
   width: 3.875rem;
   height: 3.875rem;
   border: 0;
   background-color: var(--primary);
+}
+
+.item__container {
+  padding: 1.125rem 0;
+  max-width: 15.9375rem;
+  gap: 4.6875rem;
+}
+
+.mailing {
+  padding: 1.5rem 0;
+  gap: 0.75rem;
+}
+
+input[type="email"] {
+  color: var(--background);
+  border: 0.0625rem solid #E8E8E8;
+  padding: 1rem 2.1875rem;
+  border-radius: 39px;
+  background: #F4F4F4;
+  max-height: 3.375rem;
+}
+
+input::placeholder {
+  color: var(--background);
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1rem;
+  letter-spacing: 0.00625rem;
+}
+
+.client-container {
+  padding: 1.5625rem 2.5rem;
+  gap: 1.875rem;
+  max-width: 17.1875rem;
+  border: 1px solid #D8D8D8;
+}
+
+.testimonial {
+  padding: 0.95125rem 0;
+  max-width: 296.91px;
+  gap: 2.8rem;
+  color: var(--second-text, #374754);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 13.526px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16.907px;
+  letter-spacing: 0.169px;
+}
+.testimonial img {
+  max-width: 126.679px;
+}
+
+.cleint{
+  max-width: 8rem;
 }
