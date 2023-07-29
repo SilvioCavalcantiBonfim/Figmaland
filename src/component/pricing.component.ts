@@ -1,4 +1,4 @@
-import { BuilderElement } from "../builder/BuilderElement.builder.js";
+import { BuilderElement } from "../builder/BuilderElement.builder";
 
 class PricingComponent extends HTMLElement {
   constructor() {
@@ -7,14 +7,14 @@ class PricingComponent extends HTMLElement {
   }
 
   connectedCallback() {
-    const attr = {};
+    const attr: {[key: string]: any} = {};
     this.getAttributeNames().forEach(
       (_attr) => (attr[_attr] = this.getAttribute(_attr))
     );
     this.render(attr);
   }
 
-  render(args) {
+  render(args: {[key: string]: any}) {
     // cria os elementos filhos do heading e o heading
     const _heading = BuilderElement("div", {
       className: ["d-flex", "flex-column", "align-items-center"],
@@ -67,9 +67,9 @@ class PricingComponent extends HTMLElement {
     //cria os elementos filhos do list e o list
 
     const _list = BuilderElement("div", {
-      appendChild: (args.list || "")
+      appendChild: (args.list || "" as string)
         .split(",")
-        .map((e) =>
+        .map((e: string) =>
           BuilderElement("div", {
             className: ["text_content", "w-100"],
             innerText: e,
@@ -94,12 +94,13 @@ class PricingComponent extends HTMLElement {
       },
       appendChild: [_heading, _row, _list, BuilderElement('div', {className: ['w-100','d-flex','justify-content-center'],innerHTML: this.innerHTML})],
     });
-
-    this.shadowRoot.innerHTML += `<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/font.css" />
-    <link rel="stylesheet" href="/css/variable.css" />`;
-    this.shadowRoot.appendChild(_container);
+    if (this.shadowRoot) {
+      this.shadowRoot.innerHTML += `<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'>
+      <link rel="stylesheet" href="/css/style.css" />
+      <link rel="stylesheet" href="/css/font.css" />
+      <link rel="stylesheet" href="/css/variable.css" />`;
+      this.shadowRoot.appendChild(_container);
+    }
   }
 }
 

@@ -6,7 +6,7 @@ type BuilderElementActions = {
   [key: string]: (element: HTMLElement, value: any) => void;
 };
 
-export function builderElement(tagName: string, args: ElementStyle) {
+export function BuilderElement(tagName: string, args: ElementStyle): HTMLElement {
 
   const Element = document.createElement(tagName);
 
