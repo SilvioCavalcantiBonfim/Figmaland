@@ -12,6 +12,11 @@ const actions = {
     childrens.forEach(element => {
       Element.appendChild(element);
     });
+  },
+  setAttribute(Element, attr){
+    Object.keys(attr).forEach(key => {
+      Element.setAttribute(key,attr[key]);
+    })
   }
 }
 
