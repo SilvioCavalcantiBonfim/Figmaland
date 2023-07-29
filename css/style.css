@@ -2,6 +2,7 @@
   font-family: Graphik, sans-serif;
 }
 
+h1,
 p,
 h2,
 h4,
@@ -10,9 +11,22 @@ button {
   font-family: Graphik;
   padding: 0.625rem;
   font-style: normal;
-  font-weight: 400;
   letter-spacing: 0.0125rem;
   margin: 0 !important;
+}
+
+p,
+h2,
+h4,
+input[type="email"],
+button {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 74px;
+  font-weight: 700;
+  line-height: 74px;
 }
 
 h6 {
@@ -92,7 +106,14 @@ h4 {
 }
 
 ._container {
+  /* 80 */
   padding: 2.5rem 1.25rem;
+  gap: 3.6875rem;
+}
+
+._container_2 {
+  /* 100 */
+  padding: 5rem 1.25rem;
   gap: 3.6875rem;
 }
 
@@ -172,10 +193,47 @@ input::placeholder {
   line-height: 16.907px;
   letter-spacing: 0.169px;
 }
+
 .testimonial img {
   max-width: 126.679px;
 }
 
-.cleint{
+.cleint {
   max-width: 8rem;
+}
+
+.cleint__text__content * {
+  all: unset;
+  font-family: Roboto;
+  font-style: normal;
+}
+
+.cleint__text__content h6 {
+  color: var(--second-text);
+  font-size: 10.144px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15.216px;
+  letter-spacing: 0.085px;
+}
+
+.cleint__text__content p {
+  color: var(--text);
+  font-size: 12.68px;
+  font-weight: 400;
+  line-height: 22.824px;
+  letter-spacing: 0.169px;
+}
+
+.pricing {
+  background-color: var(--dark-background);
+}
+
+.pricing-style {
+  max-width: 20.9375rem;
+  min-height: 100px;
+  padding: 2.5rem;
+  border-radius: 0.625rem;
+  gap: 1.875rem;
+  box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
 }
