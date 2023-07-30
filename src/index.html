@@ -12,6 +12,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
@@ -60,20 +64,85 @@
         ></image>
       </defs>
     </svg>
+
+    <svg
+      style="z-index: -1; filter: brightness(50%)"
+      class="d-sm-block d-md-none d-none position-absolute top-0 left-0"
+      viewBox="0 0 1776 1527"
+      fill="none"
+    >
+      <path d="M 0 -3 H 1776 V 1240 L 884 1427 L 0 1240 L 0 -3 Z" fill="#222B32" />
+      <path
+        d="M 0 -3 H 1776 V 1240 L 884 1427 L 0 1240 L 0 -3 Z"
+        fill="url(#pattern1)"
+      />
+      <defs>
+        <pattern
+          id="pattern1"
+          patternContentUnits="objectBoundingBox"
+          width="1"
+          height="1"
+        >
+          <use
+            xlink:href="#image0_102_5259"
+            transform="matrix(0.000347464 0 0 0.000663456 0 -0.136586)"
+          />
+        </pattern>
+        <image
+          id="image0_102_5259"
+          width="2878"
+          height="1919"
+          xlink:href="/assets/background.jpeg"
+        ></image>
+      </defs>
+    </svg>
+    <!-- <svg 
+      style="z-index: -1; filter: brightness(50%)" 
+      class="d-none d-sm-block position-absolute top-0 left-0"
+      viewBox="0 0 1776 927" 
+      fill="none"
+      >
+      <path d="M0.234375 -3H1776V740.136L884.415 927L0.234375 740.136L0.234375 -3Z" fill="#222B32"/>
+      <path d="M0.234375 -3H1776V740.136L884.415 927L0.234375 740.136L0.234375 -3Z" fill="url(#pattern1)"/>
+      <defs>
+      <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <use xlink:href="#image0_65_309" transform="matrix(0.000347464 0 0 0.000663456 0 -0.136586)"/>
+        <image id="image0_65_309" width="2878" height="1919" xlink:href="/assets/background.jpeg"/>
+      </pattern>
+    </defs>
+  </svg> -->
     <!-- header e nav -->
     <header>
       <nav class="d-flex justify-content-between align-items-center">
         <div class="logo"></div>
-        <button class="bg-transparent border-0" style="width: auto">
+        <button class="bg-transparent border-0" style="width: auto" id="button__dropdown">
           <svg width="40" height="32" viewBox="0 0 40 32" fill="none">
             <path
               d="M6.66797 8H33.3346V10.6667H6.66797V8ZM13.3346 14.6667H33.3346V17.3333H13.3346V14.6667ZM21.668 21.3333H33.3346V24H21.668V21.3333Z"
               fill="white"
             />
           </svg>
+          <div
+            id="dropdown__content"
+            class="position-absolute z-3 bg-white w-100 mt-3 menu d-flex flex-column align-items-start"
+          >
+            <a href="#home">
+              <span>Home</span>
+            </a>
+            <a href="#features">
+              <span>Product</span>
+            </a>
+            <a href="#pricing">
+              <span>pricing</span>
+            </a>
+            <a href="#contact_us">
+              <span>contact us</span>
+            </a>
+          </div>
         </button>
       </nav>
     </header>
+
     <!-- Home -->
     <section class="_container d-flex flex-column align-items-center" id="home">
       <div class="text_content d-flex flex-column text-white">
@@ -278,7 +347,10 @@
       <button class="text-white try">More Testimonials</button>
     </section>
     <!-- pricing -->
-    <section class="_container_2 d-flex flex-column align-items-center pricing">
+    <section
+      class="_container_2 d-flex flex-column align-items-center dark__background"
+      id="pricing"
+    >
       <div class="text_content text-white" style="max-width: 17.8125rem">
         <h2 class="m-0 text-center">Pricing</h2>
         <h4 class="m-0 text-center">Most calendars are designed for teams.</h4>
@@ -320,8 +392,11 @@
         <!-- <button class="text-white">Order Now</button> -->
       </app-pricing>
     </section>
-
-    <section class="_container_2 d-flex flex-column align-items-center">
+    <!-- contact us -->
+    <section
+      class="_container_2 d-flex flex-column align-items-center"
+      id="contact_us"
+    >
       <div class="text_content" style="max-width: 17.8125rem">
         <h2 class="m-0 text-center">Contact Us</h2>
         <h4 class="m-0 text-center">Most calendars are designed for teams.</h4>
@@ -362,9 +437,7 @@
       </div>
 
       <form action="">
-        <div
-          class="contact__form d-grid"
-        >
+        <div class="contact__form d-grid">
           <h3 class="w-100 text-center">Contact Us</h3>
           <input type="text" placeholder="Your Name" name="name" id="name" />
           <input
@@ -373,10 +446,73 @@
             name="email"
             id="email"
           />
-          <textarea placeholder="Your Message" class="w-100" style="resize: none"></textarea>
-          <button class="text-white" style="max-width: min-content; padding: 1.125rem 3rem;">Send</button>
+          <textarea
+            placeholder="Your Message"
+            class="w-100"
+            style="resize: none"
+          ></textarea>
+          <button
+            class="text-white"
+            style="max-width: min-content; padding: 1.125rem 3rem"
+          >
+            Send
+          </button>
         </div>
       </form>
     </section>
+    <!-- footer -->
+    <footer
+      class="_container_2 d-flex flex-column align-items-center dark__background"
+    >
+      <div class="d-flex flex-column" style="gap: 1rem">
+        <h3 class="text-white">Annette Steward</h3>
+        <div class="d-flex flex-column align-items-center gap-3">
+          <div class="footer__menu__text text-white">Jennie Cooper</div>
+          <div class="footer__menu__text text-white">Julie Henry</div>
+          <div class="footer__menu__text text-white">Johnny Murphy</div>
+          <div class="footer__menu__text text-white">Gregory Mccoy</div>
+          <div class="footer__menu__text text-white">Marvin Mckinney</div>
+        </div>
+      </div>
+      <div class="d-flex flex-column" style="gap: 1rem">
+        <h3 class="text-white">Annette Steward</h3>
+        <div class="d-flex flex-column align-items-center gap-3">
+          <div class="footer__menu__text text-white">Jennie Cooper</div>
+          <div class="footer__menu__text text-white">Julie Henry</div>
+          <div class="footer__menu__text text-white">Johnny Murphy</div>
+          <div class="footer__menu__text text-white">Gregory Mccoy</div>
+          <div class="footer__menu__text text-white">Marvin Mckinney</div>
+        </div>
+      </div>
+      <div class="d-flex flex-column" style="gap: 1rem">
+        <h3 class="text-white">Annette Steward</h3>
+        <div class="d-flex flex-column align-items-center gap-3">
+          <div class="footer__menu__text text-white">Jennie Cooper</div>
+          <div class="footer__menu__text text-white">Julie Henry</div>
+          <div class="footer__menu__text text-white">Johnny Murphy</div>
+          <div class="footer__menu__text text-white">Gregory Mccoy</div>
+          <div class="footer__menu__text text-white">Marvin Mckinney</div>
+        </div>
+      </div>
+      <div class="footer__menu__info text-white d-grid">
+        <img src="/assets/icons/location-dark.svg" />
+        <div class="p-2" style="justify-self: start">
+          7480 Mockingbird Hill undefined
+        </div>
+        <img src="/assets/icons/cell-dark.svg" style="padding: 0.625rem 0" />
+        <div style="padding: 0.625rem; justify-self: start">(239) 555-0108</div>
+        <div class="footer__menu__info__social__media d-flex">
+          <a href="http://" target="_blank">
+            <img src="/assets/icons/twitter-dark.svg" />
+          </a>
+          <a href="http://" target="_blank">
+            <img src="/assets/icons/facebook-dark.svg" />
+          </a>
+          <a href="http://" target="_blank">
+            <img src="/assets/icons/linkedin-dark.svg" />
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
