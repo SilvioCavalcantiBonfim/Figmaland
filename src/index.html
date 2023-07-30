@@ -292,7 +292,7 @@
         color="var(--text)"
         list="Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature"
       >
-        <button class="text-white w-100">Order Now</button>
+        <!-- <button class="text-white w-100">Order Now</button> -->
       </app-pricing>
 
       <app-pricing
@@ -304,9 +304,9 @@
         value="10"
         list="Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature"
       >
-        <button style="color: var(--primary); background-color: #ffffff">
+        <!-- <button style="color: var(--primary); background-color: #ffffff">
           Order Now
-        </button>
+        </button> -->
       </app-pricing>
 
       <app-pricing
@@ -317,7 +317,7 @@
         color="var(--text)"
         list="Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature"
       >
-        <button class="text-white">Order Now</button>
+        <!-- <button class="text-white">Order Now</button> -->
       </app-pricing>
     </section>
 
@@ -343,19 +343,17 @@
       </div>
 
       <div class="text_content d-flex flex-column" style="padding: 1.125rem 0">
-        <div class="text_content d-flex align-items-center ">
+        <div class="text_content d-flex align-items-center">
           <img src="/assets/icons/location.svg" />
           <h6 class="m-0" style="padding: 0.625rem">
             6386 Spring St undefined Anchorage, Georgia 12473 United States
           </h6>
         </div>
-        <div class="text_content d-flex align-items-center ">
+        <div class="text_content d-flex align-items-center">
           <img src="/assets/icons/cell.svg" />
-          <h6 class="m-0" style="padding: 0.625rem">
-            (843) 555-0130
-          </h6>
+          <h6 class="m-0" style="padding: 0.625rem">(843) 555-0130</h6>
         </div>
-        <div class="text_content d-flex align-items-center ">
+        <div class="text_content d-flex align-items-center">
           <img src="/assets/icons/mail.svg" />
           <h6 class="m-0" style="padding: 0.625rem">
             willie.jennings@example.com
@@ -363,9 +361,22 @@
         </div>
       </div>
 
-      <div class="contact__form">
-
-      </div>
+      <form action="">
+        <div
+          class="contact__form d-grid"
+        >
+          <h3 class="w-100 text-center">Contact Us</h3>
+          <input type="text" placeholder="Your Name" name="name" id="name" />
+          <input
+            type="email"
+            placeholder="Your Email"
+            name="email"
+            id="email"
+          />
+          <textarea placeholder="Your Message" class="w-100" style="resize: none"></textarea>
+          <button class="text-white" style="max-width: min-content; padding: 1.125rem 3rem;">Send</button>
+        </div>
+      </form>
     </section>
   </body>
 </html>

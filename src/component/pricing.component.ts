@@ -78,6 +78,9 @@ class PricingComponent extends HTMLElement {
         ),
     });
 
+    // button 
+    const _bt = BuilderElement("button", {});
+
     //Cria o container principal
     const _container = BuilderElement("article", {
       className: [
@@ -92,8 +95,9 @@ class PricingComponent extends HTMLElement {
         color: args.color ?? "#000000",
         backgroundColor: args.bg ?? "#FFFFFF",
       },
-      appendChild: [_heading, _row, _list, BuilderElement('div', {className: ['w-100','d-flex','justify-content-center'],innerHTML: this.innerHTML})],
+      appendChild: [_heading, _row, _list, _bt],
     });
+
     if (this.shadowRoot) {
       this.shadowRoot.innerHTML += `<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'>
       <link rel="stylesheet" href="/css/style.css" />

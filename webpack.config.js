@@ -25,11 +25,11 @@ module.exports = {
     extensions: ['.ts', '.js'], // Extensões que o Webpack deve resolver
   },
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'subdist'), // Define a pasta "subdist" como o diretório estático
-    },
-    compress: true,
-    port: 3000, // Define a porta do servidor
+    port: 8080,
+    hot: false,
+    liveReload: true,
+    watchFiles: ['./src/**'],
+    open: ['http://localhost:8080/index.html']
   },
   module: {
     rules: [

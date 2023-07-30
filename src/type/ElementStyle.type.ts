@@ -1,3 +1,3 @@
-export type ElementStyle = {
+export type ElementArg = {
   [key: string]: any;
 };

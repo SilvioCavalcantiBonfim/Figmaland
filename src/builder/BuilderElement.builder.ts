@@ -1,12 +1,12 @@
 import { ApplyStyle } from "../factory/ApplyStyle.factory";
 import { ManageClass } from "../factory/ManageClass.factory";
-import { ElementStyle } from "../type/ElementStyle.type";
+import { ElementArg } from "../type/ElementStyle.type";
 
 type BuilderElementActions = {
   [key: string]: (element: HTMLElement, value: any) => void;
 };
 
-export function BuilderElement(tagName: string, args: ElementStyle): HTMLElement {
+export function BuilderElement(tagName: string, args: ElementArg): HTMLElement {
 
   const Element = document.createElement(tagName);
 
@@ -14,7 +14,7 @@ export function BuilderElement(tagName: string, args: ElementStyle): HTMLElement
     className(element: HTMLElement, className: string | string[]) {
       ManageClass(element, className).add();
     },
-    style(element: HTMLElement, style: ElementStyle) {
+    style(element: HTMLElement, style: ElementArg) {
       ApplyStyle(element, style);
     },
     appendChild(element: HTMLElement, childrens: HTMLElement[]) {

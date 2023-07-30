@@ -6,7 +6,7 @@ h1,
 p,
 h2,
 h4,
-input[type="email"],
+input,
 button {
   font-family: Graphik;
   padding: 0.625rem;
@@ -18,7 +18,7 @@ button {
 p,
 h2,
 h4,
-input[type="email"],
+input,
 button {
   font-weight: 400;
 }
@@ -154,7 +154,7 @@ h4 {
   gap: 0.75rem;
 }
 
-input[type="email"] {
+input {
   color: var(--background);
   border: 0.0625rem solid #E8E8E8;
   padding: 1rem 2.1875rem;
@@ -163,7 +163,7 @@ input[type="email"] {
   max-height: 3.375rem;
 }
 
-input::placeholder {
+*::placeholder {
   color: var(--background);
   font-family: 'Roboto', sans-serif;
   font-size: 0.875rem;
@@ -238,6 +238,19 @@ input::placeholder {
   box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
 }
 
-.contact__form{
-  
+.contact__form {
+  padding: 3.25rem 3.0625rem;
+  gap: 2.8125rem;
+  box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 1.25rem;
+  background: #FFF;
+  border: 1px solid #DDD;
+}
+
+textarea {
+  border: 1px solid #E8E8E8;
+  background: #F5F5F5;
+  padding: 1.4375rem 1.25rem;
+  min-height: 12.375rem;
+  box-sizing: border-box;
 }
