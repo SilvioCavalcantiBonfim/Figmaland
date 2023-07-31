@@ -15,7 +15,6 @@ video {
 .gap-7 {
   gap: 0.4375rem !important;
 }
-
 .gap-10 {
   gap: 0.625rem !important;
 }
@@ -24,6 +23,9 @@ video {
 }
 .gap-59{
   gap: 3.6875rem !important;
+}
+.gap-72{
+  gap: 4.5rem;
 }
 
 .p-10 {
@@ -65,6 +67,9 @@ video {
 #fasttest{
   grid-template-columns: 1fr;
 }
+.justify-self-center{
+  justify-self: center;
+}
 /* lg >*/
 @media screen and (min-width: 992px) {
   /* Coloque seus estilos aqui */
@@ -96,6 +101,27 @@ video {
   }
   #fasttest app-button{
     justify-self: start;
+  }
+  h4{
+    font-size: 1.25rem !important;
+    line-height: 2rem !important;
+  }
+  .container{
+    min-height: 1vh;
+  }
+  .container_2 {
+    padding: 5rem 1rem !important;
+    min-height: 1vh;
+  }
+  .testimonial{
+    max-width: max-content !important;
+  }
+  .footer__container{
+    grid-template-columns: auto 24rem;
+  }
+  .footer__container__2{
+    gap: 1.25rem;
+    grid-template-columns: 10rem repeat(2, auto);
   }
   /* Outros seletores e estilos que desejar aplicar no viewport maior ou igual a 998 pixels */
 }
@@ -272,6 +298,7 @@ textarea {
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
+  padding: 0 10px;
   /* 186.667% */
   letter-spacing: 0.2px;
 }
