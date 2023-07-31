@@ -78,8 +78,12 @@ class PricingComponent extends HTMLElement {
         ),
     });
 
-    // button 
-    const _bt = BuilderElement("button", {});
+    // button build not working with app-button
+    const _bt = document.createElement('app-button');
+    _bt.setAttribute('label', 'Order Now');
+    _bt.setAttribute('className', 'w-100');
+    _bt.setAttribute('theme', (args.bg === '#2091F9')?'WHITE':'BLUE');
+    _bt.style.width = '100%';
 
     //Cria o container principal
     const _container = BuilderElement("article", {

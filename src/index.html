@@ -26,9 +26,12 @@
     ></script>
     <script src="/main.bundle.js"></script>
     <script src="/pricing.bundle.js"></script>
+    <script src="/client.bundle.js"></script>
+    <script src="/button.bundle.js"></script>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/font.css" />
     <link rel="stylesheet" href="/css/variable.css" />
+    <link rel="stylesheet" href="/css/animation.css" />
     <title>Figma Land</title>
   </head>
   <body>
@@ -71,7 +74,10 @@
       viewBox="0 0 1776 1527"
       fill="none"
     >
-      <path d="M 0 -3 H 1776 V 1240 L 884 1427 L 0 1240 L 0 -3 Z" fill="#222B32" />
+      <path
+        d="M 0 -3 H 1776 V 1240 L 884 1427 L 0 1240 L 0 -3 Z"
+        fill="#222B32"
+      />
       <path
         d="M 0 -3 H 1776 V 1240 L 884 1427 L 0 1240 L 0 -3 Z"
         fill="url(#pattern1)"
@@ -114,8 +120,18 @@
     <!-- header e nav -->
     <header>
       <nav class="d-flex justify-content-between align-items-center">
-        <div class="logo"></div>
-        <button class="bg-transparent border-0" style="width: auto" id="button__dropdown">
+        <a href="" class="logo__container">
+          <img
+            src="/assets/logo.png"
+            class="object-fit-contain w-100 h-100"
+            alt="logo"
+          />
+        </a>
+        <button
+          class="bg-transparent border-0"
+          style="width: auto"
+          id="button__dropdown"
+        >
           <svg width="40" height="32" viewBox="0 0 40 32" fill="none">
             <path
               d="M6.66797 8H33.3346V10.6667H6.66797V8ZM13.3346 14.6667H33.3346V17.3333H13.3346V14.6667ZM21.668 21.3333H33.3346V24H21.668V21.3333Z"
@@ -124,18 +140,30 @@
           </svg>
           <div
             id="dropdown__content"
-            class="position-absolute z-3 bg-white w-100 mt-3 menu d-flex flex-column align-items-start"
+            class="position-absolute z-3 bg-white w-100 mt-3 end-0 scaley-0 menu d-flex flex-column align-items-start"
           >
-            <a href="#home">
+            <a
+              class="text-capitalize text text-decoration-none w-100 d-flex align-items-center border-bottom py-4 px-5"
+              href="#home"
+            >
               <span>Home</span>
             </a>
-            <a href="#features">
+            <a
+              class="text-capitalize text text-decoration-none w-100 d-flex align-items-center border-bottom py-4 px-5"
+              href="#features"
+            >
               <span>Product</span>
             </a>
-            <a href="#pricing">
+            <a
+              class="text-capitalize text text-decoration-none w-100 d-flex align-items-center border-bottom py-4 px-5"
+              href="#pricing"
+            >
               <span>pricing</span>
             </a>
-            <a href="#contact_us">
+            <a
+              class="text-capitalize text text-decoration-none w-100 d-flex align-items-center border-bottom py-4 px-5"
+              href="#contact_us"
+            >
               <span>contact us</span>
             </a>
           </div>
@@ -144,121 +172,135 @@
     </header>
 
     <!-- Home -->
-    <section class="_container d-flex flex-column align-items-center" id="home">
-      <div class="text_content d-flex flex-column text-white">
+    <section
+      class="container gap-59 d-flex flex-column align-items-center"
+      id="home"
+    >
+      <div class="gap-7 d-flex flex-column text-white">
         <h2 class="text-center">The best products start with Figma</h2>
         <h4 class="text-center">Most calendars are designed for teams.</h4>
       </div>
-      <button class="text-white">Try For Free</button>
+      <app-button
+        class="w-100 d-flex justify-content-center"
+        style="max-width: 14.75rem"
+        label="Try For Free"
+      ></app-button>
       <div class="w-100" style="height: 8rem"></div>
     </section>
     <!-- features -->
     <section
-      class="_container d-flex flex-column align-items-center"
+      class="container gap-59 d-flex flex-column align-items-center"
       id="features"
     >
-      <div class="d-flex flex-column feactures__text__content">
+      <div class="d-flex flex-column mx-4 gap-7">
         <h2 class="text text-center">Features</h2>
         <h4 class="second-text text-center">
           Most calendars are designed for teams.
         </h4>
       </div>
-      <div
-        class="w-100 video position-relative d-flex justify-content-center align-items-center"
-      >
-        <video
-          muted
-          id="video__1"
-          style="
-            box-shadow: 0px 2.6704981327056885px 20.696359634399414px 0px
-              rgba(0, 0, 0, 0.15);
-          "
+      <div class="d-flex video-container w-100 gap-59">
+        <div
+          class="w-100 position-relative d-flex justify-content-center align-items-center"
         >
-          <source src="/assets/video.mp4" type="video/mp4" />
-        </video>
-        <button
-          class="position-absolute rounded-circle d-flex align-items-center justify-content-center ratio-1x1 video__button"
-          id="button__play__1"
-        >
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path
-              d="M1.32812 0.332397L14.1243 8.01008L1.32812 15.6878V0.332397Z"
-              fill="white"
-            />
-          </svg>
-        </button>
-      </div>
-      <div class="item__container w-100 d-flex flex-column">
-        <article
-          class="d-flex flex-column justify-content-between align-items-center"
-          style="gap: 0.625rem"
-        >
-          <svg width="62" height="62" viewBox="0 0 62 62" fill="none">
-            <path
-              d="M22.1042 7.74384C25.8117 7.74384 29.3673 9.21664 31.9889 11.8382C34.6105 14.4598 36.0833 18.0155 36.0833 21.723C36.0833 25.1034 34.8888 28.2043 32.8808 30.6188H53.875V53.4938H31V32.4997C28.5854 34.5076 25.4846 35.7022 22.1042 35.7022C18.3967 35.7022 14.841 34.2294 12.2194 31.6078C9.5978 28.9862 8.125 25.4305 8.125 21.723C8.125 18.0155 9.5978 14.4598 12.2194 11.8382C14.841 9.21664 18.3967 7.74384 22.1042 7.74384Z"
-              fill="#2091F9"
-            />
-          </svg>
-          <h3 class="text text-center m-0">OpenType features Variable fonts</h3>
-          <p class="second-text text-center">
-            Slate helps you see how many more days you need to work to reach
-            your financial goal.
-          </p>
-        </article>
-
-        <article
-          class="d-flex flex-column justify-content-between align-items-center"
-          style="gap: 0.625rem"
-        >
-          <svg width="56" height="57" viewBox="0 0 56 57" fill="none">
-            <path
-              d="M22.7486 48.7689C26.902 47.1356 25.992 42.6323 23.892 39.7856C21.8153 36.8689 18.9453 34.8623 16.052 32.9256C13.9876 31.6244 12.1443 30.0018 10.592 28.1189C9.93863 27.3489 8.60863 25.9256 9.96197 25.6456C11.3386 25.3656 13.7186 26.7189 14.932 27.2323C17.0553 28.1189 19.1553 29.1456 21.1153 30.3589L23.472 26.3923C19.832 23.9889 15.1653 21.8656 10.8253 21.2356C8.35197 20.8623 5.73863 21.3756 4.89863 24.0589C4.15197 26.3689 5.34197 28.7023 6.6953 30.5223C9.89197 34.7923 14.862 36.8456 18.572 40.5323C19.3653 41.3023 20.322 42.2123 20.7886 43.2856C21.2786 44.3123 21.162 44.3823 20.0653 44.3823C17.172 44.3823 13.5553 42.1189 11.1986 40.6256L8.84197 44.5923C12.412 46.7856 18.3853 50.2156 22.7486 48.7689ZM48.6253 12.3689C49.1386 11.8556 49.1386 11.0156 48.6253 10.5256L45.592 7.49227C45.3476 7.25673 45.0214 7.12512 44.682 7.12512C44.3425 7.12512 44.0164 7.25673 43.772 7.49227L41.392 9.87226L46.2453 14.7256L48.6253 12.3689ZM25.6653 25.5989V30.4523H30.5186L44.8686 16.1023L40.0153 11.2489L25.6653 25.5989Z"
-              fill="#2091F9"
-            />
-          </svg>
-
-          <h3 class="text text-center m-0">Design with real data</h3>
-          <p class="second-text text-center">
-            Slate helps you see how many more days you need to work to reach
-            your financial goal.
-          </p>
-        </article>
-
-        <article
-          class="d-flex flex-column justify-content-between align-items-center"
-          style="gap: 0.625rem"
-        >
-          <svg width="62" height="62" viewBox="0 0 62 62" fill="none">
-            <path
-              d="M53.1366 11.8868L49.7308 8.48099C48.7904 7.48974 47.1383 7.48974 46.147 8.48099L23.3737 31.2543L30.3633 38.2439L53.1366 15.4706C54.1279 14.4793 54.1279 12.8272 53.1366 11.8868ZM18.2904 35.7022C16.2681 35.7022 14.3286 36.5056 12.8987 37.9355C11.4687 39.3655 10.6654 41.305 10.6654 43.3272C10.6654 46.6568 7.71703 48.4106 5.58203 48.4106C7.92036 51.5114 11.9362 53.4939 15.7487 53.4939C18.4451 53.4939 21.031 52.4228 22.9376 50.5162C24.8442 48.6095 25.9154 46.0236 25.9154 43.3272C25.9154 41.305 25.112 39.3655 23.6821 37.9355C22.2521 36.5056 20.3126 35.7022 18.2904 35.7022Z"
-              fill="#2091F9"
-            />
-          </svg>
-
-          <h3 class="text text-center m-0">Fastest way to take action</h3>
-          <p class="second-text text-center">
-            Slate helps you see how many more days you need to work to reach
-            your financial goal.
-          </p>
-        </article>
+          <video
+            muted
+            id="video__1"
+            style="
+              box-shadow: 0px 2.6704981327056885px 20.696359634399414px 0px
+                rgba(0, 0, 0, 0.15);
+            "
+          >
+            <source src="/assets/video.mp4" type="video/mp4" />
+          </video>
+          <button
+            class="position-absolute border-0 rounded-circle d-flex align-items-center justify-content-center"
+            style="width: 4rem; height: 4rem"
+            id="button__play__1"
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M1.32812 0.332397L14.1243 8.01008L1.32812 15.6878V0.332397Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="item__container w-100 d-grid justify-content-center">
+          <article
+            class="d-flex flex-column justify-content-between align-items-center"
+            style="gap: 0.625rem"
+          >
+            <svg width="62" height="62" viewBox="0 0 62 62" fill="none">
+              <path
+                d="M22.1042 7.74384C25.8117 7.74384 29.3673 9.21664 31.9889 11.8382C34.6105 14.4598 36.0833 18.0155 36.0833 21.723C36.0833 25.1034 34.8888 28.2043 32.8808 30.6188H53.875V53.4938H31V32.4997C28.5854 34.5076 25.4846 35.7022 22.1042 35.7022C18.3967 35.7022 14.841 34.2294 12.2194 31.6078C9.5978 28.9862 8.125 25.4305 8.125 21.723C8.125 18.0155 9.5978 14.4598 12.2194 11.8382C14.841 9.21664 18.3967 7.74384 22.1042 7.74384Z"
+                fill="#2091F9"
+              />
+            </svg>
+            <h3 class="text text-center m-0">OpenType features Variable fonts</h3>
+            <p class="second-text text-center">
+              Slate helps you see how many more days you need to work to reach
+              your financial goal.
+            </p>
+          </article>
+  
+          <article
+            class="d-flex flex-column justify-content-between align-items-center"
+            style="gap: 0.625rem"
+          >
+            <svg width="56" height="57" viewBox="0 0 56 57" fill="none">
+              <path
+                d="M22.7486 48.7689C26.902 47.1356 25.992 42.6323 23.892 39.7856C21.8153 36.8689 18.9453 34.8623 16.052 32.9256C13.9876 31.6244 12.1443 30.0018 10.592 28.1189C9.93863 27.3489 8.60863 25.9256 9.96197 25.6456C11.3386 25.3656 13.7186 26.7189 14.932 27.2323C17.0553 28.1189 19.1553 29.1456 21.1153 30.3589L23.472 26.3923C19.832 23.9889 15.1653 21.8656 10.8253 21.2356C8.35197 20.8623 5.73863 21.3756 4.89863 24.0589C4.15197 26.3689 5.34197 28.7023 6.6953 30.5223C9.89197 34.7923 14.862 36.8456 18.572 40.5323C19.3653 41.3023 20.322 42.2123 20.7886 43.2856C21.2786 44.3123 21.162 44.3823 20.0653 44.3823C17.172 44.3823 13.5553 42.1189 11.1986 40.6256L8.84197 44.5923C12.412 46.7856 18.3853 50.2156 22.7486 48.7689ZM48.6253 12.3689C49.1386 11.8556 49.1386 11.0156 48.6253 10.5256L45.592 7.49227C45.3476 7.25673 45.0214 7.12512 44.682 7.12512C44.3425 7.12512 44.0164 7.25673 43.772 7.49227L41.392 9.87226L46.2453 14.7256L48.6253 12.3689ZM25.6653 25.5989V30.4523H30.5186L44.8686 16.1023L40.0153 11.2489L25.6653 25.5989Z"
+                fill="#2091F9"
+              />
+            </svg>
+  
+            <h3 class="text text-center m-0">Design with real data</h3>
+            <p class="second-text text-center">
+              Slate helps you see how many more days you need to work to reach
+              your financial goal.
+            </p>
+          </article>
+  
+          <article
+            class="d-flex flex-column justify-content-between align-items-center"
+            style="gap: 0.625rem"
+          >
+            <svg width="62" height="62" viewBox="0 0 62 62" fill="none">
+              <path
+                d="M53.1366 11.8868L49.7308 8.48099C48.7904 7.48974 47.1383 7.48974 46.147 8.48099L23.3737 31.2543L30.3633 38.2439L53.1366 15.4706C54.1279 14.4793 54.1279 12.8272 53.1366 11.8868ZM18.2904 35.7022C16.2681 35.7022 14.3286 36.5056 12.8987 37.9355C11.4687 39.3655 10.6654 41.305 10.6654 43.3272C10.6654 46.6568 7.71703 48.4106 5.58203 48.4106C7.92036 51.5114 11.9362 53.4939 15.7487 53.4939C18.4451 53.4939 21.031 52.4228 22.9376 50.5162C24.8442 48.6095 25.9154 46.0236 25.9154 43.3272C25.9154 41.305 25.112 39.3655 23.6821 37.9355C22.2521 36.5056 20.3126 35.7022 18.2904 35.7022Z"
+                fill="#2091F9"
+              />
+            </svg>
+  
+            <h3 class="text text-center m-0">Fastest way to take action</h3>
+            <p class="second-text text-center">
+              Slate helps you see how many more days you need to work to reach
+              your financial goal.
+            </p>
+          </article>
+        </div>
       </div>
     </section>
     <!-- fasttest -->
     <section
-      class="_container d-flex flex-column align-items-center"
+      class="container gap-59 d-grid align-items-center justify-content-center  justify-content-center"
       id="fasttest"
-      style="gap: 3.6875rem"
     >
-      <div class="d-flex flex-column text_content">
-        <h2 class="text-center">Fastest way to organize</h2>
-        <h4 class="text-center">Most calendars are designed for teams.</h4>
+      <div class="d-flex flex-column gap-7">
+        <h2 class="text-center text-md-start">Fastest way to organize</h2>
+        <h4 class="text-center text-md-start">Most calendars are designed for teams. <span class="d-md-block d-none">Slate is designed for freelancers</span></h4>
       </div>
-      <button class="text-white try">Try For Free</button>
+      <app-button
+        class="w-100 d-flex justify-content-center"
+        style="max-width: 14.75rem"
+        try="true"
+        label="Try For Free"
+      ></app-button>
       <img src="/assets/Macbook_Pro.png" class="w-100" alt="Macbook" />
     </section>
     <!-- newsletter -->
     <section
-      class="_container d-flex flex-column align-items-center"
+      class="container gap-59 d-flex flex-column align-items-center"
       id="newsletter"
     >
       <article>
@@ -272,26 +314,27 @@
       <img
         src="/assets/container.png"
         alt="container"
-        style="padding: 0 0.90625rem"
+        style="margin: 0 0.90625rem"
         class="w-100"
       />
       <article class="d-flex flex-column gap-10 p-10">
         <h3 class="text-center">Subscribe to our Newsletter</h3>
         <p class="text-center">Available exclusivery on Figmaland</p>
-        <form class="d-flex flex-column mailing">
+        <form class="d-flex flex-column gap-3 py-4">
           <input type="email" class="rounded-pill" placeholder="Your Email" />
-          <button class="text-white text-center" style="max-width: 100%">
-            Subscribe
-          </button>
+          <app-button
+            class="w-100 d-flex justify-content-center"
+            label="Subscribe"
+          ></app-button>
         </form>
       </article>
     </section>
     <!-- partners -->
     <section
-      class="_container d-flex flex-column align-items-center"
+      class="container gap-59 d-flex flex-column align-items-center"
       id="partners"
     >
-      <article class="d-flex flex-column text_content align-items-center">
+      <article class="d-flex flex-column gap-7 align-items-center">
         <h2 class="text-center">Partners</h2>
         <h4 class="text-center">
           Most calendars are designed for teams. Slate is designed for
@@ -299,31 +342,35 @@
         </h4>
       </article>
       <article
-        class="d-flex flex-column w-100 align-items-center"
-        style="gap: 1.875rem; padding: 1.125rem 0"
+        class="d-grid client__container gap-30 w-100 align-items-center justify-content-center"
       >
-        <div class="client-container d-flex flex-column" style="gap: 0.9375rem">
-          <h6 class="text-center m-0">Client Name</h6>
-          <img src="/assets/logos/logos_google.svg" alt="google" />
-        </div>
-        <div class="client-container d-flex flex-column" style="gap: 0.9375rem">
-          <h6 class="text-center m-0">Client Name</h6>
-          <img src="/assets/logos/logos_amazon.svg" alt="amazon" />
-        </div>
-        <div class="client-container d-flex flex-column" style="gap: 0.9375rem">
-          <h6 class="text-center m-0">Client Name</h6>
-          <img src="/assets/logos/logos_microsoft.svg" alt="microsoft" />
-        </div>
+        <app-client
+          src="/assets/logos/logos_google.svg"
+          alt="google"
+        ></app-client>
+        <app-client
+          src="/assets/logos/logos_amazon.svg"
+          alt="amazon"
+        ></app-client>
+        <app-client
+          src="/assets/logos/logos_microsoft.svg"
+          alt="microsoft"
+        ></app-client>
       </article>
-      <button class="text-white try">Try For Free</button>
+      <app-button
+        class="w-100 d-flex justify-content-center"
+        style="max-width: 14.75rem"
+        try="true"
+        label="Try For Free"
+      ></app-button>
     </section>
     <!-- testimonials -->
     <section
-      class="_container_2 d-flex flex-column align-items-center"
+      class="container_2 gap-59 d-flex flex-column align-items-center"
       id="testimonials"
     >
       <h2>Testimonials</h2>
-      <article class="testimonial d-flex flex-column align-items-center">
+      <article class="testimonial second-text d-flex flex-column align-items-center">
         <img src="/assets/logos/logos_ibm.svg" />
         <span>
           Most calendars are designed for teams. Slate is designed for
@@ -344,60 +391,62 @@
           </div>
         </div>
       </article>
-      <button class="text-white try">More Testimonials</button>
+      <app-button
+        class="w-100 d-flex justify-content-center"
+        style="max-width: 14.75rem"
+        try="true"
+        label="More Testimonials"
+      ></app-button>
     </section>
     <!-- pricing -->
     <section
-      class="_container_2 d-flex flex-column align-items-center dark__background"
+      class="container_2 gap-59 d-flex flex-column align-items-center dark-background"
       id="pricing"
     >
-      <div class="text_content text-white" style="max-width: 17.8125rem">
+      <div class="gap-7 text-white" style="max-width: 17.8125rem">
         <h2 class="m-0 text-center">Pricing</h2>
         <h4 class="m-0 text-center">Most calendars are designed for teams.</h4>
       </div>
 
-      <app-pricing
-        title="FREE"
-        subtitle="Organize across all apps by hand"
-        class="w-100 d-flex justify-content-center"
-        value="0"
-        color="var(--text)"
-        list="Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature"
-      >
-        <!-- <button class="text-white w-100">Order Now</button> -->
-      </app-pricing>
-
-      <app-pricing
-        title="STANDARD"
-        subtitle="Organize across all apps by hand"
-        class="w-100 d-flex justify-content-center"
-        bg="#2091F9"
-        color="white"
-        value="10"
-        list="Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature"
-      >
-        <!-- <button style="color: var(--primary); background-color: #ffffff">
-          Order Now
-        </button> -->
-      </app-pricing>
-
-      <app-pricing
-        title="BUSINESS"
-        subtitle="Organize across all apps by hand"
-        class="w-100 d-flex justify-content-center"
-        value="99"
-        color="var(--text)"
-        list="Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature"
-      >
-        <!-- <button class="text-white">Order Now</button> -->
-      </app-pricing>
+      <div class="pricing__container d-grid gap-59 w-100 justify-content-center ">
+        <app-pricing
+          title="FREE"
+          subtitle="Organize across all apps by hand"
+          class="w-100 d-flex justify-content-center"
+          value="0"
+          color="var(--text)"
+          list="Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature"
+        >
+        </app-pricing>
+  
+        <app-pricing
+          title="STANDARD"
+          subtitle="Organize across all apps by hand"
+          class="w-100 d-flex justify-content-center center-pricing"
+          bg="#2091F9"
+          color="white"
+          value="10"
+          list="Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature"
+        >
+        </app-pricing>
+  
+        <app-pricing
+          title="BUSINESS"
+          subtitle="Organize across all apps by hand"
+          class="w-100 d-flex justify-content-center"
+          value="99"
+          color="var(--text)"
+          list="Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature"
+        >
+        </app-pricing>
+      </div>
     </section>
     <!-- contact us -->
     <section
-      class="_container_2 d-flex flex-column align-items-center"
+      class="container_2 gap-59 d-flex flex-column align-items-center"
       id="contact_us"
     >
-      <div class="text_content" style="max-width: 17.8125rem">
+      <div class="gap-7" style="max-width: 17.8125rem">
         <h2 class="m-0 text-center">Contact Us</h2>
         <h4 class="m-0 text-center">Most calendars are designed for teams.</h4>
       </div>
@@ -417,18 +466,18 @@
         </a>
       </div>
 
-      <div class="text_content d-flex flex-column" style="padding: 1.125rem 0">
-        <div class="text_content d-flex align-items-center">
+      <div class="gap-7 d-flex flex-column" style="padding: 1.125rem 0">
+        <div class="gap-7 d-flex align-items-center">
           <img src="/assets/icons/location.svg" />
           <h6 class="m-0" style="padding: 0.625rem">
             6386 Spring St undefined Anchorage, Georgia 12473 United States
           </h6>
         </div>
-        <div class="text_content d-flex align-items-center">
+        <div class="gap-7 d-flex align-items-center">
           <img src="/assets/icons/cell.svg" />
           <h6 class="m-0" style="padding: 0.625rem">(843) 555-0130</h6>
         </div>
-        <div class="text_content d-flex align-items-center">
+        <div class="gap-7 d-flex align-items-center">
           <img src="/assets/icons/mail.svg" />
           <h6 class="m-0" style="padding: 0.625rem">
             willie.jennings@example.com
@@ -436,7 +485,7 @@
         </div>
       </div>
 
-      <form action="">
+      <form action="" class="w-75">
         <div class="contact__form d-grid">
           <h3 class="w-100 text-center">Contact Us</h3>
           <input type="text" placeholder="Your Name" name="name" id="name" />
@@ -451,18 +500,17 @@
             class="w-100"
             style="resize: none"
           ></textarea>
-          <button
-            class="text-white"
-            style="max-width: min-content; padding: 1.125rem 3rem"
-          >
-            Send
-          </button>
+          <app-button
+            class="w-100 d-flex justify-content-center"
+            style="max-width: 50%;"
+            label="Send"
+          ></app-button>
         </div>
       </form>
     </section>
     <!-- footer -->
     <footer
-      class="_container_2 d-flex flex-column align-items-center dark__background"
+      class="container_2 gap-59 d-flex flex-column align-items-center dark-background"
     >
       <div class="d-flex flex-column" style="gap: 1rem">
         <h3 class="text-white">Annette Steward</h3>

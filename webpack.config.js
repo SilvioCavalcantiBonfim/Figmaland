@@ -15,7 +15,9 @@ module.exports = {
   ],
   entry: {
     main: './src/main.ts', // Arquivo de entrada do seu aplicativo TypeScript
-    pricing: './src/component/pricing.component.ts'
+    pricing: './src/component/pricing.component.ts',
+    client: './src/component/client.component.ts',
+    button: './src/component/button.component.ts'
   },
   output: {
     path: path.resolve(__dirname, 'dist'), // Pasta de saída para os arquivos do Webpack

@@ -2,12 +2,109 @@
   font-family: Graphik, sans-serif;
 }
 
+video {
+  border-radius: 1.6690625rem;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  box-shadow: 0px 8.14769172668457px 63.14461135864258px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* ====================== geral ========================= */
+
+.gap-7 {
+  gap: 0.4375rem !important;
+}
+
+.gap-10 {
+  gap: 0.625rem !important;
+}
+.gap-30{
+  gap: 1.875rem !important; 
+}
+.gap-59{
+  gap: 3.6875rem !important;
+}
+
+.p-10 {
+  padding: 0.625rem !important;
+}
+
+.scaley-0 {
+  transform: scaleY(0);
+}
+
+/* ====================== container======================= */
+.logo__container {
+  height: 4.875rem;
+  width: 12.875rem;
+}
+
+.container {
+  /* 80 */
+  padding: 2.5rem 1.25rem !important;
+}
+
+.container_2 {
+  padding: 5rem 1.25rem !important;
+}
+
+.item__container {
+  padding: 1.125rem 0;
+  gap: 4.6875rem;
+}
+
+.client__container{
+  padding: 1.125rem 0;
+}
+
+.video-container{
+  flex-direction: column;
+}
+
+#fasttest{
+  grid-template-columns: 1fr;
+}
+/* lg >*/
+@media screen and (min-width: 992px) {
+  /* Coloque seus estilos aqui */
+  .center-pricing {
+    transform: scale(1.1);
+    /* Outros estilos para o viewport maior ou igual a 998 pixels */
+  }
+  .pricing__container, .client__container{
+    grid-template-columns: repeat(auto-fit, 17.1875rem);
+  }
+  .item__container {
+    grid-template-columns: repeat(auto-fit, 15.9375rem);
+  }
+  .video-container{
+    flex-direction: column-reverse;
+  }
+  video{
+    max-width: 73.5625rem;
+  }
+  #fasttest{
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0 !important;
+  }
+  #fasttest img{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  #fasttest app-button{
+    justify-self: start;
+  }
+  /* Outros seletores e estilos que desejar aplicar no viewport maior ou igual a 998 pixels */
+}
+
 h1,
 p,
 h2,
 h4,
-input,
-button {
+input {
   font-family: Graphik;
   padding: 0.625rem;
   font-style: normal;
@@ -18,8 +115,7 @@ button {
 p,
 h2,
 h4,
-input,
-button {
+input {
   font-weight: 400;
 }
 
@@ -38,21 +134,8 @@ h6 {
   letter-spacing: 0.00625rem;
 }
 
-
 button {
   background-color: var(--primary);
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  max-width: 14.75rem;
-  padding: 1rem 0;
-  width: 100%;
-  border: 0;
-  text-align: center;
-  border-radius: var(--bs-border-radius-pill) !important;
-}
-
-.try {
-  font-weight: 700 !important;
 }
 
 p {
@@ -86,74 +169,6 @@ h4 {
   line-height: 2.5rem;
 }
 
-.gap-10 {
-  gap: 0.625rem;
-}
-
-.p-10 {
-  padding: 0.625rem;
-}
-
-.text_content {
-  gap: 0.4375rem;
-}
-
-.logo {
-  min-height: 4.875rem;
-  min-width: 12.875rem;
-  background: url("/assets/logo.png") center no-repeat;
-  background-size: contain;
-}
-
-._container {
-  /* 80 */
-  padding: 2.5rem 1.25rem;
-  gap: 3.6875rem;
-}
-
-._container_2 {
-  /* 100 */
-  padding: 5rem 1.25rem;
-  gap: 3.6875rem;
-}
-
-.features__container {
-  padding: 5rem 0;
-  gap: 3.125rem;
-}
-
-.feactures__text__content {
-  gap: 0.4375rem;
-  max-width: 17.8125rem;
-}
-
-.video {
-  box-sizing: content-box;
-  aspect-ratio: 385.887 / 215.766;
-}
-
-.video video {
-  border-radius: 1.6690625rem;
-}
-
-.video__button {
-  width: 3.875rem;
-  height: 3.875rem;
-  border: 0;
-  background-color: var(--primary);
-}
-
-.item__container {
-  padding: 1.125rem 0;
-  max-width: 15.9375rem;
-  gap: 4.6875rem;
-}
-
-.mailing {
-  padding: 1.5rem 0;
-  gap: 0.75rem;
-}
-
 input {
   color: var(--background);
   border: 0.0625rem solid #E8E8E8;
@@ -173,6 +188,15 @@ input {
   letter-spacing: 0.00625rem;
 }
 
+textarea {
+  border: 1px solid #E8E8E8;
+  background: #F5F5F5;
+  padding: 1.4375rem 1.25rem;
+  min-height: 12.375rem;
+  box-sizing: border-box;
+}
+/* ======================================================= */
+
 .client-container {
   padding: 1.5625rem 2.5rem;
   gap: 1.875rem;
@@ -182,20 +206,19 @@ input {
 
 .testimonial {
   padding: 0.95125rem 0;
-  max-width: 296.91px;
+  max-width: 18.556875rem;
   gap: 2.8rem;
-  color: var(--second-text, #374754);
   text-align: center;
   font-family: Roboto;
-  font-size: 13.526px;
+  font-size: 0.845375rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 16.907px;
-  letter-spacing: 0.169px;
+  line-height: 1.0566875rem;
+  letter-spacing: 0.0105625rem;
 }
 
 .testimonial img {
-  max-width: 126.679px;
+  max-width: 7.9174375rem;
 }
 
 .cleint {
@@ -225,13 +248,9 @@ input {
   letter-spacing: 0.169px;
 }
 
-.dark__background {
-  background-color: var(--dark-background);
-}
 
 .pricing-style {
   max-width: 20.9375rem;
-  min-height: 100px;
   padding: 2.5rem;
   border-radius: 0.625rem;
   gap: 1.875rem;
@@ -245,14 +264,6 @@ input {
   border-radius: 1.25rem;
   background: #FFF;
   border: 1px solid #DDD;
-}
-
-textarea {
-  border: 1px solid #E8E8E8;
-  background: #F5F5F5;
-  padding: 1.4375rem 1.25rem;
-  min-height: 12.375rem;
-  box-sizing: border-box;
 }
 
 .footer__menu__text {
@@ -278,127 +289,4 @@ textarea {
   grid-column-end: 3;
   padding: 1.25rem 0;
   gap: 1.5rem;
-}
-
-.menu {
-  right: 0;
-  transform: scaleY(0);
-}
-
-.menu a {
-  padding: 1.5rem 2rem;
-  border-bottom: 1px solid #E8E8E8;
-  width: 100%;
-  text-transform: capitalize;
-  color: var(--text);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-/* ----------------------------------------------
- * Generated by Animista on 2023-7-30 16:22:36
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation scale-in-ver-top
- * ----------------------------------------
- */
-@-webkit-keyframes scale-in-ver-top {
-  0% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-}
-
-@keyframes scale-in-ver-top {
-  0% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-}
-
-.scale-in-ver-top {
-  -webkit-animation: scale-in-ver-top 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: scale-in-ver-top 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-/* ----------------------------------------------
- * Generated by Animista on 2023-7-30 16:23:43
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation scale-out-ver-top
- * ----------------------------------------
- */
-@-webkit-keyframes scale-out-ver-top {
-  0% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-
-  100% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-}
-
-@keyframes scale-out-ver-top {
-  0% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-
-  100% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-}
-
-.scale-out-ver-top {
-	-webkit-animation: scale-out-ver-top 0.25s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: scale-out-ver-top 0.25s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }

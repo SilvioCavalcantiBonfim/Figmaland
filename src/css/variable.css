@@ -13,3 +13,8 @@
 .second-text{
   color: var(--second-text) !important;
 }
+
+
+.dark-background {
+  background-color: var(--dark-background);
+}
