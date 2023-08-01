@@ -1,3 +1,8 @@
+import './css/animation.css';
+import './css/font.css';
+import './css/style.css';
+import './css/variable.css';
+
 var dropdown = false;
 
 const updateBackground = () => {
