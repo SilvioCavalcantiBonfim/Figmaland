@@ -37,13 +37,14 @@
   <body>
     <!-- background -->
     <svg
+      id="background"
       style="z-index: -1; filter: brightness(50%)"
-      class="d-sm-none position-absolute top-0 left-0"
+      class="w-100 position-absolute top-0 left-0"
       viewBox="0 0 417 844"
       fill="none"
     >
-      <path d="M0 -3H417V752.605L207.631 844L0 752.605L0 -3Z" fill="#222B32" />
       <path
+        id="background_path"
         d="M0 -3H417V752.605L207.631 844L0 752.605L0 -3Z"
         fill="url(#pattern0)"
       />
@@ -56,79 +57,49 @@
         >
           <use
             xlink:href="#image0_102_5259"
-            transform="matrix(0.00105845 0 0 0.000521105 -1.02312 0)"
-          />
-        </pattern>
-        <image
-          id="image0_102_5259"
-          width="2878"
-          height="1919"
-          xlink:href="/assets/background.jpeg"
-        ></image>
-      </defs>
-    </svg>
-
-    <svg
-      style="z-index: -1; filter: brightness(50%)"
-      class="d-sm-block d-md-none d-none position-absolute top-0 left-0"
-      viewBox="0 0 1776 1527"
-      fill="none"
-    >
-      <path
-        d="M 0 -3 H 1776 V 1240 L 884 1427 L 0 1240 L 0 -3 Z"
-        fill="#222B32"
-      />
-      <path
-        d="M 0 -3 H 1776 V 1240 L 884 1427 L 0 1240 L 0 -3 Z"
-        fill="url(#pattern1)"
-      />
-      <defs>
-        <pattern
-          id="pattern1"
-          patternContentUnits="objectBoundingBox"
-          width="1"
-          height="1"
-        >
-          <use
-            xlink:href="#image0_102_5259"
+            id="background__use"
             transform="matrix(0.000347464 0 0 0.000663456 0 -0.136586)"
           />
         </pattern>
         <image
-          id="image0_102_5259"
           width="2878"
           height="1919"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          id="image0_102_5259"
           xlink:href="/assets/background.jpeg"
+          mask="url(#mask)"
         ></image>
       </defs>
     </svg>
-    <!-- <svg 
-      style="z-index: -1; filter: brightness(50%)" 
-      class="d-none d-sm-block position-absolute top-0 left-0"
-      viewBox="0 0 1776 927" 
-      fill="none"
-      >
-      <path d="M0.234375 -3H1776V740.136L884.415 927L0.234375 740.136L0.234375 -3Z" fill="#222B32"/>
-      <path d="M0.234375 -3H1776V740.136L884.415 927L0.234375 740.136L0.234375 -3Z" fill="url(#pattern1)"/>
-      <defs>
-      <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
-        <use xlink:href="#image0_65_309" transform="matrix(0.000347464 0 0 0.000663456 0 -0.136586)"/>
-        <image id="image0_65_309" width="2878" height="1919" xlink:href="/assets/background.jpeg"/>
-      </pattern>
-    </defs>
-  </svg> -->
     <!-- header e nav -->
-    <header>
-      <nav class="d-flex justify-content-between align-items-center">
-        <a href="" class="logo__container">
+    <header id="header">
+      <nav class="d-grid container align-items-center">
+        <div class="d-lg-flex d-none gap-21">
+          <a href="#home" class="p-10 text-white text-decoration-none ">Home</a>
+          <a href="#features" class="p-10 text-white text-decoration-none ">Product</a>
+          <a href="#pricing" class="p-10 text-white text-decoration-none ">Pricing</a>
+          <a href="#contact_us" class="p-10 text-white text-decoration-none ">Contact</a>
+        </div>
+        <a href="" class="logo__container p-20 justify-self-lg-center">
           <img
             src="/assets/logo.png"
             class="object-fit-contain w-100 h-100"
             alt="logo"
           />
         </a>
+        <div class="d-lg-flex d-none justify-self-lg-end social__media d-flex">
+          <a href="http://" target="_blank">
+            <img src="/assets/icons/twitter-dark.svg" />
+          </a>
+          <a href="http://" target="_blank">
+            <img src="/assets/icons/facebook-dark.svg" />
+          </a>
+          <a href="http://" target="_blank">
+            <img src="/assets/icons/linkedin-dark.svg" />
+          </a>
+        </div>
         <button
-          class="bg-transparent border-0"
+          class="d-flex d-lg-none bg-transparent border-0 justify-self-end"
           style="width: auto"
           id="button__dropdown"
         >
@@ -140,7 +111,7 @@
           </svg>
           <div
             id="dropdown__content"
-            class="position-absolute z-3 bg-white w-100 mt-3 end-0 scaley-0 menu d-flex flex-column align-items-start"
+            class="position-absolute z-3 bg-white w-100 mt-5 end-0 scaley-0 menu d-flex flex-column align-items-start"
           >
             <a
               class="text-capitalize text text-decoration-none w-100 d-flex align-items-center border-bottom py-4 px-5"
@@ -236,13 +207,15 @@
                 fill="#2091F9"
               />
             </svg>
-            <h3 class="text text-center m-0">OpenType features Variable fonts</h3>
+            <h3 class="text text-center m-0">
+              OpenType features Variable fonts
+            </h3>
             <p class="second-text text-center">
               Slate helps you see how many more days you need to work to reach
               your financial goal.
             </p>
           </article>
-  
+
           <article
             class="d-flex flex-column justify-content-between align-items-center"
             style="gap: 0.625rem"
@@ -253,14 +226,14 @@
                 fill="#2091F9"
               />
             </svg>
-  
+
             <h3 class="text text-center m-0">Design with real data</h3>
             <p class="second-text text-center">
               Slate helps you see how many more days you need to work to reach
               your financial goal.
             </p>
           </article>
-  
+
           <article
             class="d-flex flex-column justify-content-between align-items-center"
             style="gap: 0.625rem"
@@ -271,7 +244,7 @@
                 fill="#2091F9"
               />
             </svg>
-  
+
             <h3 class="text text-center m-0">Fastest way to take action</h3>
             <p class="second-text text-center">
               Slate helps you see how many more days you need to work to reach
@@ -288,7 +261,12 @@
     >
       <div class="d-flex flex-column gap-7">
         <h2 class="text-center text-lg-start">Fastest way to organize</h2>
-        <h4 class="text-center text-lg-start"><span>Most calendars are designed for teams.</span><span class="d-lg-block d-none">Slate is designed for freelancers</span></h4>
+        <h4 class="text-center text-lg-start">
+          <span>Most calendars are designed for teams.</span
+          ><span class="d-lg-block d-none"
+            >Slate is designed for freelancers</span
+          >
+        </h4>
       </div>
       <app-button
         class="w-100 d-flex justify-content-center justify-self-center"
@@ -370,7 +348,9 @@
       id="testimonials"
     >
       <h2>Testimonials</h2>
-      <article class="testimonial second-text d-flex flex-column align-items-center">
+      <article
+        class="testimonial second-text d-flex flex-column align-items-center"
+      >
         <img src="/assets/logos/logos_ibm.svg" />
         <span>
           Most calendars are designed for teams. Slate is designed for
@@ -408,7 +388,9 @@
         <h4 class="m-0 text-center">Most calendars are designed for teams.</h4>
       </div>
 
-      <div class="pricing__container d-grid gap-59 w-100 justify-content-center ">
+      <div
+        class="pricing__container d-grid gap-59 w-100 justify-content-center"
+      >
         <app-pricing
           title="FREE"
           subtitle="Organize across all apps by hand"
@@ -418,7 +400,7 @@
           list="Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature"
         >
         </app-pricing>
-  
+
         <app-pricing
           title="STANDARD"
           subtitle="Organize across all apps by hand"
@@ -429,7 +411,7 @@
           list="Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature, Pricing Feature"
         >
         </app-pricing>
-  
+
         <app-pricing
           title="BUSINESS"
           subtitle="Organize across all apps by hand"
@@ -502,7 +484,7 @@
           ></textarea>
           <app-button
             class="w-100 d-flex justify-content-center"
-            style="max-width: 50%;"
+            style="max-width: 50%"
             label="Send"
           ></app-button>
         </div>
@@ -513,9 +495,11 @@
       class="container_2 gap-59 d-grid dark-background justify-content-center footer__container"
     >
       <div class="footer__container__2 gap-72 d-grid">
-        <div class="d-flex flex-column" style="gap: 1rem;">
+        <div class="d-flex flex-column" style="gap: 1rem">
           <h3 class="text-white text-center text-lg-start text-wrap">Pages</h3>
-          <div class="d-flex flex-column align-items-center align-items-lg-start gap-3">
+          <div
+            class="d-flex flex-column align-items-center align-items-lg-start gap-3"
+          >
             <div class="footer__menu__text text-white">Home</div>
             <div class="footer__menu__text text-white">Product</div>
             <div class="footer__menu__text text-white">Pricing</div>
@@ -523,9 +507,13 @@
             <div class="footer__menu__text text-white">Contact</div>
           </div>
         </div>
-        <div class="d-flex flex-column" style="gap: 1rem;">
-          <h3 class="text-white text-center text-lg-start text-nowrap">Annette Steward</h3>
-          <div class="d-flex flex-column align-items-center align-items-lg-start gap-3">
+        <div class="d-flex flex-column" style="gap: 1rem">
+          <h3 class="text-white text-center text-lg-start text-nowrap">
+            Annette Steward
+          </h3>
+          <div
+            class="d-flex flex-column align-items-center align-items-lg-start gap-3"
+          >
             <div class="footer__menu__text text-white">Jennie Cooper</div>
             <div class="footer__menu__text text-white">Julie Henry</div>
             <div class="footer__menu__text text-white">Johnny Murphy</div>
@@ -533,9 +521,13 @@
             <div class="footer__menu__text text-white">Marvin Mckinney</div>
           </div>
         </div>
-        <div class="d-flex flex-column" style="gap: 1rem;">
-          <h3 class="text-white text-center text-lg-start text-nowrap">Annette Steward</h3>
-          <div class="d-flex flex-column align-items-center align-items-lg-start gap-3">
+        <div class="d-flex flex-column" style="gap: 1rem">
+          <h3 class="text-white text-center text-lg-start text-nowrap">
+            Annette Steward
+          </h3>
+          <div
+            class="d-flex flex-column align-items-center align-items-lg-start gap-3"
+          >
             <div class="footer__menu__text text-white">Jennie Cooper</div>
             <div class="footer__menu__text text-white">Julie Henry</div>
             <div class="footer__menu__text text-white">Johnny Murphy</div>
@@ -544,7 +536,10 @@
           </div>
         </div>
       </div>
-      <div class="footer__menu__info text-white d-grid" style="max-width: 24rem;">
+      <div
+        class="footer__menu__info text-white d-grid"
+        style="max-width: 24rem"
+      >
         <img src="/assets/icons/location-dark.svg" />
         <div class="p-2" style="justify-self: start">
           7480 Mockingbird Hill undefined

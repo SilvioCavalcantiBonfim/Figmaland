@@ -18,6 +18,9 @@ video {
 .gap-10 {
   gap: 0.625rem !important;
 }
+.gap-21{
+  gap: 1.3125rem !important;
+}
 .gap-30{
   gap: 1.875rem !important; 
 }
@@ -30,6 +33,10 @@ video {
 
 .p-10 {
   padding: 0.625rem !important;
+}
+
+.p-20 {
+  padding: 1.25rem !important;
 }
 
 .scaley-0 {
@@ -70,9 +77,19 @@ video {
 .justify-self-center{
   justify-self: center;
 }
+.justify-self-end{
+  justify-self: end;
+}
+
 /* lg >*/
 @media screen and (min-width: 992px) {
   /* Coloque seus estilos aqui */
+  .justify-self-lg-center{
+    justify-self: center;
+  }
+  .justify-self-lg-end{
+    justify-self: end;
+  }
   .center-pricing {
     transform: scale(1.1);
     /* Outros estilos para o viewport maior ou igual a 998 pixels */
@@ -123,6 +140,9 @@ video {
     gap: 1.25rem;
     grid-template-columns: 10rem repeat(2, auto);
   }
+  nav {
+    grid-template-columns: repeat(2, auto) 1fr !important;
+  }
   /* Outros seletores e estilos que desejar aplicar no viewport maior ou igual a 998 pixels */
 }
 
@@ -171,7 +191,7 @@ p {
 }
 
 nav {
-  padding: 1.0625rem 1rem;
+  grid-template-columns: repeat(2,1fr);
 }
 
 h2 {
@@ -314,6 +334,9 @@ textarea {
 .footer__menu__info__social__media {
   grid-column-start: 1;
   grid-column-end: 3;
+}
+
+.footer__menu__info__social__media, .social__media {
   padding: 1.25rem 0;
   gap: 1.5rem;
 }
