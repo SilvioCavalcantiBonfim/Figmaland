@@ -7,6 +7,7 @@
 ![figma](https://img.shields.io/badge/-Figma-white?style=for-the-badge&logo=figma&color=F24E1E&logoColor=white)
 ![docker](https://img.shields.io/badge/-docker-white?style=for-the-badge&logo=docker&color=2496ED&logoColor=white)
 ![nginx](https://img.shields.io/badge/-nginx-white?style=for-the-badge&logo=nginx&color=009639&logoColor=white)
+![webpack](https://img.shields.io/badge/-webpack-white?style=for-the-badge&logo=webpack&color=8DD6F9&logoColor=white)
 
 Este projeto é uma landing page chamada Figma Land, criada com base em um modelo disponível no Figma. O objetivo desta landing page é mostrar os recursos e detalhes de um produto ou serviço de forma atraente e interativa. O projeto utiliza TypeScript, Webpack e Docker com Nginx para melhorar a experiência de desenvolvimento e implantação.
 
