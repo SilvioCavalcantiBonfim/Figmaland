@@ -72,10 +72,16 @@
     <header id="header">
       <nav class="d-grid container align-items-center">
         <div class="d-lg-flex d-none gap-21">
-          <a href="#home" class="p-10 text-white text-decoration-none ">Home</a>
-          <a href="#features" class="p-10 text-white text-decoration-none ">Product</a>
-          <a href="#pricing" class="p-10 text-white text-decoration-none ">Pricing</a>
-          <a href="#contact_us" class="p-10 text-white text-decoration-none ">Contact</a>
+          <a href="#home" class="p-10 text-white text-decoration-none">Home</a>
+          <a href="#features" class="p-10 text-white text-decoration-none"
+            >Product</a
+          >
+          <a href="#pricing" class="p-10 text-white text-decoration-none"
+            >Pricing</a
+          >
+          <a href="#contact_us" class="p-10 text-white text-decoration-none"
+            >Contact</a
+          >
         </div>
         <a href="" class="logo__container p-20 justify-self-lg-center">
           <img
@@ -275,13 +281,16 @@
     </section>
     <!-- newsletter -->
     <section
-      class="container gap-59 d-flex flex-column align-items-center"
+      class="container gap-59 d-flex flex-column align-items-center d-lg-grid"
       id="newsletter"
     >
-      <article>
-        <h3 class="text-center">At your fingertips</h3>
-        <h2 class="text-center">Newsletter</h2>
-        <h4 class="text-center">
+      <article class="align-self-lg-end">
+        <h3 class="text-center text-lg-start">At your fingertips</h3>
+        <h2 class="text d-none d-lg-block">
+          Lightning fast prototyping
+        </h2>
+        <h2 class="text-center d-lg-none d-block">Newsletter</h2>
+        <h4 class="text-center d-lg-none d-block">
           Most calendars are designed for teams. Slate is designed for
           freelancers
         </h4>
@@ -290,13 +299,15 @@
         src="/assets/container.png"
         alt="container"
         style="margin: 0 0.90625rem"
-        class="w-100"
+        class="w-100 d-flex"
       />
-      <article class="d-flex flex-column gap-10 p-10">
-        <h3 class="text-center">Subscribe to our Newsletter</h3>
-        <p class="text-center">Available exclusivery on Figmaland</p>
-        <form class="d-flex flex-column gap-3 py-4">
-          <input type="email" class="rounded-pill" placeholder="Your Email" />
+      <article class="d-flex flex-column p-10 gap-lg-0 align-self-lg-start w-100" style="gap: 0.625rem">
+        <h3 class="text-center text-lg-start">Subscribe to our Newsletter</h3>
+        <p class="text-center text-lg-start">
+          Available exclusivery on Figmaland
+        </p>
+        <form class="d-flex flex-column flex-lg-row gap-3 py-4 w-100">
+          <input type="email" class="rounded-pill w-100" placeholder="Your Email"/>
           <app-button
             class="w-100 d-flex justify-content-center"
             label="Subscribe"
@@ -422,16 +433,19 @@
     </section>
     <!-- contact us -->
     <section
-      class="container gap-59 d-flex flex-column align-items-center"
+      class="container gap-59 d-flex d-lg-grid flex-column align-items-center"
       id="contact_us"
     >
-      <div class="gap-7" style="max-width: 17.8125rem">
+      <div class="gap-7 title justify-self-lg-center" style="">
         <h2 class="m-0 text-center">Contact Us</h2>
-        <h4 class="m-0 text-center">Most calendars are designed for teams.</h4>
+        <h4 class="m-0 text-center">
+          Most calendars are designed for teams.
+          <span class="d-none d-lg-block">Slate is designed for freelancers</span>
+        </h4>
       </div>
 
       <div
-        class="d-flex w-100"
+        class="d-flex w-100 social"
         style="max-width: 11.875rem; padding: 0.625rem; gap: 1.5rem"
       >
         <a href="https://twitter.com/" target="_blank">
@@ -445,27 +459,35 @@
         </a>
       </div>
 
-      <div class="gap-7 d-flex flex-column" style="padding: 1.125rem 0">
-        <div class="gap-7 d-flex align-items-center">
-          <img src="/assets/icons/location.svg" />
+      <div class="gap-7 d-flex flex-lg-row flex-column info" style="padding: 1.125rem 0">
+        <div class="gap-7 d-flex flex-lg-column align-items-center">
+          <img src="/assets/icons/location.svg" alt="Icone de Localização" style="min-height: 2.1875rem;"/>
           <h6 class="m-0" style="padding: 0.625rem">
-            6386 Spring St undefined Anchorage, Georgia 12473 United States
+            <p>
+              6386 Spring St undefined Anchorage,
+            </p>
+            <p>
+              Georgia 12473 United States
+            </p>
           </h6>
         </div>
-        <div class="gap-7 d-flex align-items-center">
-          <img src="/assets/icons/cell.svg" />
+        <div class="gap-7 d-flex flex-lg-column align-items-center">
+          <img src="/assets/icons/cell.svg"  alt="Icone de Contato" style="min-height: 2.1875rem;"/>
           <h6 class="m-0" style="padding: 0.625rem">(843) 555-0130</h6>
         </div>
-        <div class="gap-7 d-flex align-items-center">
-          <img src="/assets/icons/mail.svg" />
+        <div class="gap-7 d-flex flex-lg-column align-items-center">
+          <img src="/assets/icons/mail.svg"  alt="Icone de email" style="min-height: 2.1875rem;"/>
           <h6 class="m-0" style="padding: 0.625rem">
             willie.jennings@example.com
           </h6>
         </div>
       </div>
 
-      <form action="" class="w-75">
-        <div class="contact__form d-grid">
+      <div class="justify-self-lg-center" id="map"  style="background-image: url('/assets/map.png');">
+      </div>
+
+      <form action="" class="w-100 d-flex">
+        <div class="contact__form d-grid w-100">
           <h3 class="w-100 text-center">Contact Us</h3>
           <input type="text" placeholder="Your Name" name="name" id="name" />
           <input
@@ -489,9 +511,9 @@
     </section>
     <!-- footer -->
     <footer
-      class="container_2 gap-59 d-grid dark-background justify-content-center footer__container"
+      class="container_2 gap-59 d-grid dark-background justify-content-center"
     >
-      <div class="footer__container__2 gap-72 d-grid">
+      <div class="footer__container gap-72 d-grid">
         <div class="d-flex flex-column" style="gap: 1rem">
           <h3 class="text-white text-center text-lg-start text-wrap">Pages</h3>
           <div
@@ -534,7 +556,7 @@
         </div>
       </div>
       <div
-        class="footer__menu__info text-white d-grid"
+        class="info text-white d-grid"
         style="max-width: 24rem"
       >
         <img src="/assets/icons/location-dark.svg" />
@@ -543,7 +565,7 @@
         </div>
         <img src="/assets/icons/cell-dark.svg" style="padding: 0.625rem 0" />
         <div style="padding: 0.625rem; justify-self: start">(239) 555-0108</div>
-        <div class="footer__menu__info__social__media d-flex">
+        <div class="social d-flex justify-self-lg-start">
           <a href="http://" target="_blank">
             <img src="/assets/icons/twitter-dark.svg" />
           </a>

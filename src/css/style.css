@@ -15,19 +15,24 @@ video {
 .gap-7 {
   gap: 0.4375rem !important;
 }
+
 .gap-10 {
   gap: 0.625rem !important;
 }
-.gap-21{
+
+.gap-21 {
   gap: 1.3125rem !important;
 }
-.gap-30{
-  gap: 1.875rem !important; 
+
+.gap-30 {
+  gap: 1.875rem !important;
 }
-.gap-59{
+
+.gap-59 {
   gap: 3.6875rem !important;
 }
-.gap-72{
+
+.gap-72 {
   gap: 4.5rem;
 }
 
@@ -63,85 +68,177 @@ video {
   gap: 4.6875rem;
 }
 
-.client__container{
+.client__container {
   padding: 1.125rem 0;
 }
 
-.video-container{
+.video-container {
   flex-direction: column;
 }
 
-#fasttest{
+#fasttest {
   grid-template-columns: 1fr;
 }
-.justify-self-center{
+
+.justify-self-center {
   justify-self: center;
 }
-.justify-self-end{
+
+.justify-self-end {
   justify-self: end;
+  align-self: self-end;
+  align-self: self-start;
 }
 
 /* lg >*/
 @media screen and (min-width: 992px) {
+
   /* Coloque seus estilos aqui */
-  .justify-self-lg-center{
+  .justify-self-lg-center {
     justify-self: center;
   }
-  .justify-self-lg-end{
+
+  .justify-self-lg-end {
     justify-self: end;
   }
+
+  .justify-self-lg-start {
+    justify-self: start;
+  }
+
+  .align-self-lg-start {
+    align-self: self-start;
+  }
+
+  .align-self-lg-end {
+    align-self: self-end;
+  }
+
   .center-pricing {
     transform: scale(1.1);
     /* Outros estilos para o viewport maior ou igual a 998 pixels */
   }
-  .pricing__container, .client__container{
+
+  .pricing__container,
+  .client__container {
     grid-template-columns: repeat(auto-fit, 17.1875rem);
   }
+
   .item__container {
     grid-template-columns: repeat(auto-fit, 15.9375rem);
   }
-  .video-container{
+
+  .video-container {
     flex-direction: column-reverse;
   }
-  video{
+
+  video {
     max-width: 73.5625rem;
   }
-  #fasttest{
+
+  #fasttest {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 0 !important;
   }
-  #fasttest img{
+
+  #fasttest img {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
   }
-  #fasttest app-button{
+
+  #fasttest app-button {
     justify-self: start;
   }
-  h4{
+
+  h4 {
     font-size: 1.25rem !important;
     line-height: 2rem !important;
   }
-  .container{
+
+  .container {
     min-height: 1vh;
   }
+
   .container_2 {
     padding: 5rem 1rem !important;
     min-height: 1vh;
   }
-  .testimonial{
+
+  .testimonial {
     max-width: max-content !important;
   }
-  .footer__container{
+
+  footer {
     grid-template-columns: auto 24rem;
   }
-  .footer__container__2{
+
+  .footer__container {
     gap: 1.25rem;
     grid-template-columns: 10rem repeat(2, auto);
   }
+
   nav {
     grid-template-columns: repeat(2, auto) 1fr !important;
+  }
+
+  #newsletter {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 1rem !important;
+    column-gap: 3.125rem !important;
+  }
+
+  #newsletter>img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  #contact_us {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, auto);
+    row-gap: 3.125rem !important;
+    column-gap: 3.125rem !important;
+  }
+
+  #contact_us>.title {
+    max-width: max-content;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  #contact_us>.social {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  #contact_us>.info {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  #contact_us>form {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    width: 100% !important;
+  }
+  #map{
+    width: 516px;
+    height: 323.185px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   /* Outros seletores e estilos que desejar aplicar no viewport maior ou igual a 998 pixels */
 }
@@ -191,7 +288,7 @@ p {
 }
 
 nav {
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 h2 {
@@ -241,6 +338,7 @@ textarea {
   min-height: 12.375rem;
   box-sizing: border-box;
 }
+
 /* ======================================================= */
 
 .client-container {
@@ -323,7 +421,7 @@ textarea {
   letter-spacing: 0.2px;
 }
 
-.footer__menu__info {
+footer > .info {
   grid-template-columns: 2.875rem auto;
   grid-column-gap: 0.25rem;
   grid-row-gap: 0.625rem;
@@ -331,12 +429,13 @@ textarea {
   justify-items: center;
 }
 
-.footer__menu__info__social__media {
+footer > .info > .social {
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
-.footer__menu__info__social__media, .social__media {
+footer > .info > .social,
+.social__media {
   padding: 1.25rem 0;
   gap: 1.5rem;
 }

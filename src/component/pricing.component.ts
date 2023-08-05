@@ -104,9 +104,7 @@ class PricingComponent extends HTMLElement {
 
     if (this.shadowRoot) {
       this.shadowRoot.innerHTML += `<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'>
-      <link rel="stylesheet" href="/css/style.css" />
-      <link rel="stylesheet" href="/css/font.css" />
-      <link rel="stylesheet" href="/css/variable.css" />`;
+      <link rel="stylesheet" href="styles.bundle.css" />`;
       this.shadowRoot.appendChild(_container);
     }
   }
