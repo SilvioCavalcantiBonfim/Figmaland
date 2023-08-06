@@ -1,7 +1,4 @@
-import './css/animation.css';
-import './css/font.css';
-import './css/style.css';
-import './css/variable.css';
+import './css/main.scss';
 
 var dropdown = false;
 

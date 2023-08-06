@@ -1,3 +1,9 @@
+@import 'variable';
+@import 'animation';
+@import 'font';
+@import 'util';
+@import '~bootstrap/scss/bootstrap';
+
 * {
   font-family: Graphik, sans-serif;
 }
@@ -92,8 +98,6 @@ video {
 
 /* lg >*/
 @media screen and (min-width: 992px) {
-
-  /* Coloque seus estilos aqui */
   .justify-self-lg-center {
     justify-self: center;
   }
@@ -116,7 +120,6 @@ video {
 
   .center-pricing {
     transform: scale(1.1);
-    /* Outros estilos para o viewport maior ou igual a 998 pixels */
   }
 
   .pricing__container,
@@ -141,7 +144,7 @@ video {
     row-gap: 0 !important;
   }
 
-  #fasttest img {
+  #fasttest picture {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -190,7 +193,7 @@ video {
     column-gap: 3.125rem !important;
   }
 
-  #newsletter>img {
+  #newsletter > picture {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;

@@ -2,6 +2,8 @@ const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
+
 
 module.exports = {
   entry: {
@@ -32,12 +34,14 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
-        include: path.resolve(__dirname, "src/css"), // Inclui apenas arquivos CSS da pasta "src/css"
+        test: /\.s[ac]ss$/i,
         use: [
-          MiniCssExtractPlugin.loader, // Extrai o CSS em arquivos separados
-          "css-loader", // Carrega o CSS e resolve as importações e url() dentro do CSS
-        ],
+          // Adicione os loaders nesta ordem
+          // 'style-loader', // Transfere os estilos para o DOM
+          MiniCssExtractPlugin.loader,
+          'css-loader', // Converte CSS para módulos CommonJS
+          'sass-loader' // Compila Sass para CSS
+        ]
       },
     ],
   },
@@ -47,7 +51,20 @@ module.exports = {
     ],
   },
   plugins: [
-    // Outros plugins que você possa ter
+    // Plugin para converter arquivos PNG e JPEG para WebP
+    new ImageminWebpWebpackPlugin({
+      config: [{
+        test: /\.(jpe?g|png)/,
+        options: {
+          quality:  100
+        }
+      }],
+      overrideExtension: true,
+      detailedLogs: false,
+      silent: false,
+      strict: true
+    }),
+    
     new MiniCssExtractPlugin({
       filename: "styles.bundle.css", // Nome do arquivo CSS gerado
     }),
