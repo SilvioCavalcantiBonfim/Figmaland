@@ -3,23 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
-    />
-    <meta name="description" content="Figmaland - Descubra um mundo de criatividade e produtividade com o Figma. Explore recursos, tutoriais e dicas úteis para aprimorar suas habilidades de design e elevar seus projetos a um novo patamar. Junte-se à comunidade Figmaland e embarque em uma jornada emocionante para criar interfaces incríveis, experiências envolventes e muito mais.">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <script src="/Figmaland/main.bundle.js"></script>
-    <script src="/Figmaland/pricing.bundle.js"></script>
-    <script src="/Figmaland/client.bundle.js"></script>
-    <script src="/Figmaland/button.bundle.js"></script>
-    <link rel="stylesheet" href="/Figmaland/styles.bundle.css" />
-    <title>Figma Land</title>
+    <meta http-equiv="Cache-Control" content="max-age=604800, public">
+    <meta name="description" content="Figmaland - Descubra um mundo de criatividade e produtividade com o Figma. Explore recursos, tutoriais e dicas úteis para aprimorar suas habilidades de design e elevar seus projetos a um novo patamar. Junte-se à comunidade Figmaland e embarque em uma jornada emocionante para criar interfaces incríveis, experiências envolventes e muito mais.">  
+    <title><%= htmlWebpackPlugin.options.templateParameters.title %></title>
   </head>
   <body>
     <!-- background -->
@@ -53,7 +39,7 @@
           height="1919"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           id="image0_102_5259"
-          href="/Figmaland/assets/background.webp"
+          href="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/background.webp?v=1"
           mask="url(#mask)"
         ></image>
       </defs>
@@ -73,21 +59,21 @@
             >Contact</a
           >
         </div>
-        <a href="https://silviocavalcantibonfim.github.io/Figmaland/" class="logo__container p-20 justify-self-lg-center">
+        <a href="<%= htmlWebpackPlugin.options.templateParameters.url %>" class="logo__container p-20 justify-self-lg-center">
           <picture>
-            <source srcset="/Figmaland/assets/logo.webp" type="image/webp">
-            <img src="/Figmaland/assets/logo.png" class="object-fit-contain w-100 h-100" alt="logo"/>
+            <source srcset="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/logo.webp" type="image/webp">
+            <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/logo.png" class="object-fit-contain w-100 h-100" alt="logo"/>
           </picture>
         </a>
         <div class="d-lg-flex d-none justify-self-lg-end social__media d-flex">
           <a href="http://www.twitter.com/" target="_blank" aria-label="Siga-nos no Twitter">
-            <img src="/Figmaland/assets/icons/twitter-dark.svg" alt="Logo do twitter"/>
+            <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/twitter-dark.svg" alt="Logo do twitter"/>
           </a>
           <a href="http://www.facebook.com/" target="_blank" aria-label="Siga-nos no Facebook">
-            <img src="/Figmaland/assets/icons/facebook-dark.svg" alt="Logo do facebook"/>
+            <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/facebook-dark.svg" alt="Logo do facebook"/>
           </a>
           <a href="http://www.linkedin.com/" target="_blank" aria-label="Visite nosso perfil no LinkedIn">
-            <img src="/Figmaland/assets/icons/linkedin-dark.svg" alt="Logo do linkedin"/>
+            <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/linkedin-dark.svg" alt="Logo do linkedin"/>
           </a>
         </div>
         <button
@@ -173,7 +159,7 @@
                 rgba(0, 0, 0, 0.15);
             "
           >
-            <source src="/Figmaland/assets/video.mp4" type="video/mp4" />
+            <source src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/video.mp4" type="video/mp4" />
           </video>
           <button
             class="position-absolute border-0 rounded-circle d-flex align-items-center justify-content-center"
@@ -268,8 +254,8 @@
         label="Try For Free"
       ></app-button>
       <picture>
-        <source srcset="/Figmaland/assets/Macbook_Pro.webp" type="image/webp">
-        <img src="/Figmaland/assets/Macbook_Pro.png" class="w-100" alt="Macbook" />
+        <source srcset="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/Macbook_Pro.webp" type="image/webp">
+        <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/Macbook_Pro.png" class="w-100" alt="Macbook" />
       </picture>
     </section>
     <!-- newsletter -->
@@ -289,9 +275,9 @@
         </h4>
       </article>
       <picture>
-        <source srcset="/Figmaland/assets/container.webp" type="image/webp">
+        <source srcset="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/container.webp" type="image/webp">
         <img
-          src="/Figmaland/assets/container.png"
+          src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/container.png"
           alt="imagem decorativa do newsletter"
           style="margin: 0 0.90625rem"
           class="w-100 d-flex"
@@ -327,15 +313,15 @@
         class="d-grid client__container gap-30 w-100 align-items-center justify-content-center"
       >
         <app-client
-          src="/Figmaland/assets/logos/logos_google.svg"
+          src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/logos/logos_google.svg"
           alt="google"
         ></app-client>
         <app-client
-          src="/Figmaland/assets/logos/logos_amazon.svg"
+          src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/logos/logos_amazon.svg"
           alt="amazon"
         ></app-client>
         <app-client
-          src="/Figmaland/assets/logos/logos_microsoft.svg"
+          src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/logos/logos_microsoft.svg"
           alt="microsoft"
         ></app-client>
       </article>
@@ -355,16 +341,16 @@
       <article
         class="testimonial second-text d-flex flex-column align-items-center"
       >
-        <img src="/Figmaland/assets/logos/logos_ibm.svg" alt="Logo da IBM"/>
+        <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/logos/logos_ibm.svg" alt="Logo da IBM"/>
         <span>
           Most calendars are designed for teams. Slate is designed for
           freelancers who want a simple way to plan their schedule.
         </span>
         <div class="client d-flex align-items-center" style="gap: 0.6875rem">
           <picture>
-            <source srcset="/Figmaland/assets/user.webp" type="image/webp">
+            <source srcset="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/user.webp" type="image/webp">
             <img
-              src="/Figmaland/assets/user.png"
+              src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/user.png"
               alt="Usuário"
               class="rounded-circle"
               style="width: 2.6416875rem; height: 2.6416875rem"
@@ -448,19 +434,19 @@
         style="max-width: 11.875rem; padding: 0.625rem; gap: 1.5rem"
       >
         <a href="https://www.twitter.com/" target="_blank" aria-label="Siga-nos no Twitter">
-          <img src="/Figmaland/assets/icons/twitter.svg" alt="Logo do twitter"/>
+          <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/twitter.svg" alt="Logo do twitter"/>
         </a>
         <a href="https://www.facebook.com/" target="_blank" aria-label="Siga-nos no Facebook">
-          <img src="/Figmaland/assets/icons/facebook.svg" alt="Logo do facebook"/>
+          <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/facebook.svg" alt="Logo do facebook"/>
         </a>
         <a href="https://www.linkedin.com/" target="_blank" aria-label="Visite nosso perfil no LinkedIn">
-          <img src="/Figmaland/assets/icons/linkedin.svg" alt="Logo do linkedin"/>
+          <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/linkedin.svg" alt="Logo do linkedin"/>
         </a>
       </div>
 
       <div class="gap-7 d-flex flex-lg-row flex-column info" style="padding: 1.125rem 0">
         <div class="gap-7 d-flex flex-lg-column align-items-center">
-          <img src="/Figmaland/assets/icons/location.svg" alt="Icone de Localização" style="min-height: 2.1875rem;"/>
+          <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/location.svg" alt="Icone de Localização" style="min-height: 2.1875rem;"/>
           <h6 class="m-0" style="padding: 0.625rem">
             <p>
               6386 Spring St undefined Anchorage,
@@ -471,18 +457,18 @@
           </h6>
         </div>
         <div class="gap-7 d-flex flex-lg-column align-items-center">
-          <img src="/Figmaland/assets/icons/cell.svg"  alt="Icone de Contato" style="min-height: 2.1875rem;"/>
+          <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/cell.svg"  alt="Icone de Contato" style="min-height: 2.1875rem;"/>
           <h6 class="m-0" style="padding: 0.625rem">(843) 555-0130</h6>
         </div>
         <div class="gap-7 d-flex flex-lg-column align-items-center">
-          <img src="/Figmaland/assets/icons/mail.svg"  alt="Icone de email" style="min-height: 2.1875rem;"/>
+          <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/mail.svg"  alt="Icone de email" style="min-height: 2.1875rem;"/>
           <h6 class="m-0" style="padding: 0.625rem">
             willie.jennings@example.com
           </h6>
         </div>
       </div>
 
-      <div class="justify-self-lg-center" id="map"  style="background-image: url('/Figmaland/assets/map.webp');">
+      <div class="justify-self-lg-center" id="map"  style="background-image: url('<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/map.webp?v=1');">
       </div>
 
       <form action="" class="w-100 d-flex">
@@ -558,21 +544,21 @@
         class="info text-white d-grid"
         style="max-width: 24rem"
       >
-        <img src="/Figmaland/assets/icons/location-dark.svg"  alt="Icone de Localização"/>
+        <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/location-dark.svg"  alt="Icone de Localização"/>
         <div class="p-2" style="justify-self: start">
           7480 Mockingbird Hill undefined
         </div>
-        <img src="/Figmaland/assets/icons/cell-dark.svg"  alt="Logo de celular" style="padding: 0.625rem 0" />
+        <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/cell-dark.svg"  alt="Logo de celular" style="padding: 0.625rem 0" />
         <div style="padding: 0.625rem; justify-self: start">(239) 555-0108</div>
         <div class="social d-flex justify-self-lg-start">
           <a href="http://www.twitter.com/" target="_blank" aria-label="Siga-nos no Twitter">
-            <img src="/Figmaland/assets/icons/twitter-dark.svg" alt="Logo do twitter"/>
+            <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/twitter-dark.svg" alt="Logo do twitter"/>
           </a>
           <a href="http://www.facebook.com/" target="_blank" aria-label="Siga-nos no Facebook">
-            <img src="/Figmaland/assets/icons/facebook-dark.svg" alt="Logo do facebook"/>
+            <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/facebook-dark.svg" alt="Logo do facebook"/>
           </a>
           <a href="http://www.linkedin.com/" target="_blank"  aria-label="Visite nosso perfil no LinkedIn">
-            <img src="/Figmaland/assets/icons/linkedin-dark.svg" alt="Logo do linkedin"/>
+            <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/linkedin-dark.svg" alt="Logo do linkedin"/>
           </a>
         </div>
       </div>

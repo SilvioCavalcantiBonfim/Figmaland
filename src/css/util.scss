@@ -1,7 +1,18 @@
+$primary: #2091F9;
 
+$spacer: 1rem;
 
-$teste: #ffffff;
+$spacers: (
+//px: space 
+  0: 0,
+  7: $spacer * 0.4375,
+  10: $spacer * 0.625,
+  16: $spacer,
+  20: $spacer * 1.25,
+  21: $spacer * 1.3125,
+  30: $spacer * 1.875,
+  59: $spacer * 3.6875,
+  72: $spacer * 4.5,
+);
 
-main{
-  background-color: $teste;
-}
+@import '~bootstrap/scss/bootstrap';

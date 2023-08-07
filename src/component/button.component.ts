@@ -15,41 +15,38 @@ class ButtonComponent extends HTMLElement {
   }
 
   render(args: { [key: string]: any }) {
-    // cria os elementos filhos do heading e o heading
-    const themeColor: {[k: string]: any} = {
-      'BLUE': {
-        backgroundColor: "var(--primary)",
-        color: "#ffffff"
-      },
-      'WHITE': {
-        color: "var(--primary)",
-        backgroundColor: "#ffffff"
-      }
+
+    const styles = document.getElementsByTagName('link');
+    if (styles) this.shadowRoot?.appendChild(styles[0].cloneNode(true));
+
+    const themeColor: { [k: string]: string[] } = {
+      'BLUE': ['bg-primary', 'text-white'],
+      'WHITE': ['bg-white', 'text-primary']
     }
 
+    var _class: string[] = themeColor[args.theme || 'BLUE'];
+
+    _class = _class.concat(['p-16', 'm-0', 'rounded-pill', 'text-center', 'border-0', 'w-100']);
+
+    if(args.className)
+      _class = args.className.split(' ');
+    // cria os elementos filhos do heading e o heading
+
+    console.log(args)
+    console.log(_class)
     const _button = BuilderElement('button', {
-      className: ((args.className)?args.className+ ' ':'') + 'rounded-pill',
+      className: _class,
       innerText: args.label,
       onclick: args.onclick,
       style: {
-        fontFamily: "Graphik",
-        padding: "1rem",
-        fontStyle: "normal",
         letterSpacing: "0.0125rem",
-        margin: "0 !important",
         fontWeight: (args.try)?700:400,
-        backgroundColor: themeColor[args.theme || 'BLUE'].backgroundColor || themeColor[args.theme].backgroundColor,
         fontSize: "1.25rem",
-        lineHeight: "1.25rem",
-        width: "100%",
-        border: "0",
-        textAlign: "center",
-        color: themeColor[args.theme || 'BLUE'].color || themeColor[args.theme].color
+        lineHeight: "1.25rem"
       }
     });
 
     if (this.shadowRoot) {
-      this.shadowRoot.innerHTML += `<link rel="stylesheet" href="/Figmaland/styles.bundle.css" />`;
       this.shadowRoot.appendChild(_button);
     }
   }

@@ -5,7 +5,6 @@ export const ManageClass = (element: HTMLElement, className: string[] | string) 
   }else {
     classNames = className;
   }
- 
   return {
     add() {
       classNames.forEach((e) => element.classList.add(e));

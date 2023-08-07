@@ -15,6 +15,8 @@ class ClientComponent extends HTMLElement {
   }
 
   render(args: { [key: string]: any }) {
+    const styles = document.getElementsByTagName('link');
+    if (styles) this.shadowRoot?.appendChild(styles[0].cloneNode(true));
     // cria os elementos filhos do heading e o heading
     const _img = BuilderElement('img', {
       src: args.src,
@@ -36,7 +38,6 @@ class ClientComponent extends HTMLElement {
     });
 
     if (this.shadowRoot) {
-      this.shadowRoot.innerHTML += `<link rel="stylesheet" href="/Figmaland/styles.bundle.css" />`;
       this.shadowRoot.appendChild(_container);
     }
   }

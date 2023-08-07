@@ -2,7 +2,7 @@ import './css/main.scss';
 
 var dropdown = false;
 
-const updateBackground = () => {
+function updateBackground() {
   const home__rect = document.getElementById("home")?.getBoundingClientRect().height || 0;
   const header__rect = document.getElementById("header")?.getBoundingClientRect().height || 0;
   const w = document.body.getBoundingClientRect().width || 0;
@@ -52,9 +52,7 @@ window.onload = () => {
   const bt_video = document.getElementById("button__play__1");
   const bt_dropdown = document.getElementById("button__dropdown");
   const dropdown_menu = document.getElementById("dropdown__content");
-
   updateBackground();
-
   window.addEventListener('resize', updateBackground);
 
   bt_dropdown?.addEventListener('click', () => {

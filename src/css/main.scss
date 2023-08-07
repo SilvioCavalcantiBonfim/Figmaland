@@ -2,7 +2,6 @@
 @import 'animation';
 @import 'font';
 @import 'util';
-@import '~bootstrap/scss/bootstrap';
 
 * {
   font-family: Graphik, sans-serif;
@@ -17,38 +16,6 @@ video {
 }
 
 /* ====================== geral ========================= */
-
-.gap-7 {
-  gap: 0.4375rem !important;
-}
-
-.gap-10 {
-  gap: 0.625rem !important;
-}
-
-.gap-21 {
-  gap: 1.3125rem !important;
-}
-
-.gap-30 {
-  gap: 1.875rem !important;
-}
-
-.gap-59 {
-  gap: 3.6875rem !important;
-}
-
-.gap-72 {
-  gap: 4.5rem;
-}
-
-.p-10 {
-  padding: 0.625rem !important;
-}
-
-.p-20 {
-  padding: 1.25rem !important;
-}
 
 .scaley-0 {
   transform: scaleY(0);
@@ -280,10 +247,6 @@ h6 {
   letter-spacing: 0.00625rem;
 }
 
-button {
-  background-color: var(--primary);
-}
-
 p {
   line-height: 1.5625rem;
   font-size: 1.125rem;
@@ -356,7 +319,7 @@ textarea {
   max-width: 18.556875rem;
   gap: 2.8rem;
   text-align: center;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: 0.845375rem;
   font-style: normal;
   font-weight: 700;
@@ -374,7 +337,7 @@ textarea {
 
 .cleint__text__content * {
   all: unset;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
 }
 
