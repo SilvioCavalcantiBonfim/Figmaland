@@ -20,7 +20,9 @@ class ClientComponent extends HTMLElement {
     // cria os elementos filhos do heading e o heading
     const _img = BuilderElement('img', {
       src: args.src,
-      alt: args.alt
+      alt: args.alt,
+      width: args.width,
+      height: args.height,
     });
     const _title = BuilderElement('h6', {
       className: ['text-center', 'm-0'],

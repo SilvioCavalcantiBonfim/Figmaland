@@ -31,9 +31,6 @@ class ButtonComponent extends HTMLElement {
     if(args.className)
       _class = args.className.split(' ');
     // cria os elementos filhos do heading e o heading
-
-    console.log(args)
-    console.log(_class)
     const _button = BuilderElement('button', {
       className: _class,
       innerText: args.label,

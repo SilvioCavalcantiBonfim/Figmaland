@@ -58,7 +58,7 @@ module.exports = (env, argv) => {
         templateParameters: {
           // Defina suas variáveis aqui
           title: 'Figma Land',
-          url: argv.mode === 'production'?'https://silviocavalcantibonfim.github.io/Figmaland':'',
+          url: argv.mode === 'production'?'':'',
         },
       }),
       // Plugin para converter arquivos PNG e JPEG para WebP

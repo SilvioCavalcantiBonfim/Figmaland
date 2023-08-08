@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Cache-Control" content="max-age=604800, public">
-    <meta name="description" content="Figmaland - Descubra um mundo de criatividade e produtividade com o Figma. Explore recursos, tutoriais e dicas úteis para aprimorar suas habilidades de design e elevar seus projetos a um novo patamar. Junte-se à comunidade Figmaland e embarque em uma jornada emocionante para criar interfaces incríveis, experiências envolventes e muito mais.">  
+    <meta http-equiv="Cache-Control" content="max-age=604800, private" />
+    <meta
+      name="description"
+      content="Figmaland - Descubra um mundo de criatividade e produtividade com o Figma. Explore recursos, tutoriais e dicas úteis para aprimorar suas habilidades de design e elevar seus projetos a um novo patamar. Junte-se à comunidade Figmaland e embarque em uma jornada emocionante para criar interfaces incríveis, experiências envolventes e muito mais."
+    />
     <title><%= htmlWebpackPlugin.options.templateParameters.title %></title>
   </head>
   <body>
@@ -59,21 +62,58 @@
             >Contact</a
           >
         </div>
-        <a href="<%= htmlWebpackPlugin.options.templateParameters.url %>" class="logo__container p-20 justify-self-lg-center">
+        <a
+          href="<%= htmlWebpackPlugin.options.templateParameters.url %>"
+          class="logo__container p-20 justify-self-lg-center"
+        >
           <picture>
-            <source srcset="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/logo.webp" type="image/webp">
-            <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/logo.png" class="object-fit-contain w-100 h-100" alt="logo"/>
+            <source
+              srcset="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/logo.webp"
+              type="image/webp"
+            />
+            <img
+              src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/logo.png"
+              class="object-fit-contain w-100 h-100"
+              alt="logo"
+            />
           </picture>
         </a>
         <div class="d-lg-flex d-none justify-self-lg-end social__media d-flex">
-          <a href="http://www.twitter.com/" target="_blank" aria-label="Siga-nos no Twitter">
-            <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/twitter-dark.svg" alt="Logo do twitter"/>
+          <a
+            href="http://www.twitter.com/"
+            target="_blank"
+            aria-label="Siga-nos no Twitter"
+          >
+            <img
+              src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/twitter-dark.svg"
+              alt="Logo do twitter"
+              width="42"
+              height="42"
+            />
           </a>
-          <a href="http://www.facebook.com/" target="_blank" aria-label="Siga-nos no Facebook">
-            <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/facebook-dark.svg" alt="Logo do facebook"/>
+          <a
+            href="http://www.facebook.com/"
+            target="_blank"
+            aria-label="Siga-nos no Facebook"
+          >
+            <img
+              src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/facebook-dark.svg"
+              alt="Logo do facebook"
+              width="42"
+              height="42"
+            />
           </a>
-          <a href="http://www.linkedin.com/" target="_blank" aria-label="Visite nosso perfil no LinkedIn">
-            <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/linkedin-dark.svg" alt="Logo do linkedin"/>
+          <a
+            href="http://www.linkedin.com/"
+            target="_blank"
+            aria-label="Visite nosso perfil no LinkedIn"
+          >
+            <img
+              src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/linkedin-dark.svg"
+              alt="Logo do linkedin"
+              width="42"
+              height="42"
+            />
           </a>
         </div>
         <button
@@ -159,7 +199,10 @@
                 rgba(0, 0, 0, 0.15);
             "
           >
-            <source src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/video.mp4" type="video/mp4" />
+            <source
+              src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/video.mp4"
+              type="video/mp4"
+            />
           </video>
           <button
             class="position-absolute border-0 rounded-circle d-flex align-items-center justify-content-center"
@@ -254,8 +297,17 @@
         label="Try For Free"
       ></app-button>
       <picture>
-        <source srcset="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/Macbook_Pro.webp" type="image/webp">
-        <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/Macbook_Pro.png" class="w-100" alt="Macbook" />
+        <source
+          srcset="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/Macbook_Pro.webp"
+          type="image/webp"
+        />
+        <img
+          src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/Macbook_Pro.png"
+          class="w-100 h-auto"
+          alt="Macbook"
+          width="0"
+          height="0"
+        />
       </picture>
     </section>
     <!-- newsletter -->
@@ -265,9 +317,7 @@
     >
       <article class="align-self-lg-end">
         <h3 class="text-center text-lg-start">At your fingertips</h3>
-        <h2 class="text d-none d-lg-block">
-          Lightning fast prototyping
-        </h2>
+        <h2 class="text d-none d-lg-block">Lightning fast prototyping</h2>
         <h2 class="text-center d-lg-none d-block">Newsletter</h2>
         <h4 class="text-center d-lg-none d-block">
           Most calendars are designed for teams. Slate is designed for
@@ -275,21 +325,33 @@
         </h4>
       </article>
       <picture>
-        <source srcset="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/container.webp" type="image/webp">
+        <source
+          srcset="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/container.webp"
+          type="image/webp"
+        />
         <img
           src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/container.png"
           alt="imagem decorativa do newsletter"
           style="margin: 0 0.90625rem"
-          class="w-100 d-flex"
+          class="w-100 h-auto d-flex"
+          width="0"
+          height="0"
         />
       </picture>
-      <article class="d-flex flex-column p-10 gap-lg-0 align-self-lg-start w-100" style="gap: 0.625rem">
+      <article
+        class="d-flex flex-column p-10 gap-lg-0 align-self-lg-start w-100"
+        style="gap: 0.625rem"
+      >
         <h3 class="text-center text-lg-start">Subscribe to our Newsletter</h3>
         <p class="text-center text-lg-start">
           Available exclusivery on Figmaland
         </p>
         <form class="d-flex flex-column flex-lg-row gap-3 py-4 w-100">
-          <input type="email" class="rounded-pill w-100" placeholder="Your Email"/>
+          <input
+            type="email"
+            class="rounded-pill w-100"
+            placeholder="Your Email"
+          />
           <app-button
             class="w-100 d-flex justify-content-center"
             label="Subscribe"
@@ -315,14 +377,20 @@
         <app-client
           src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/logos/logos_google.svg"
           alt="google"
+          width="194"
+          height="64"
         ></app-client>
         <app-client
           src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/logos/logos_amazon.svg"
           alt="amazon"
+          width="194"
+          height="59"
         ></app-client>
         <app-client
           src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/logos/logos_microsoft.svg"
           alt="microsoft"
+          width="222"
+          height="78"
         ></app-client>
       </article>
       <app-button
@@ -341,14 +409,23 @@
       <article
         class="testimonial second-text d-flex flex-column align-items-center"
       >
-        <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/logos/logos_ibm.svg" alt="Logo da IBM"/>
+        <img
+          src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/logos/logos_ibm.svg"
+          alt="Logo da IBM"
+          class="w-100 h-auto"
+          width="0"
+          height="0"
+        />
         <span>
           Most calendars are designed for teams. Slate is designed for
           freelancers who want a simple way to plan their schedule.
         </span>
         <div class="client d-flex align-items-center" style="gap: 0.6875rem">
           <picture>
-            <source srcset="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/user.webp" type="image/webp">
+            <source
+              srcset="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/user.webp"
+              type="image/webp"
+            />
             <img
               src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/user.png"
               alt="Usuário"
@@ -425,7 +502,9 @@
         <h2 class="m-0 text-center">Contact Us</h2>
         <h4 class="m-0 text-center">
           Most calendars are designed for teams.
-          <span class="d-none d-lg-block">Slate is designed for freelancers</span>
+          <span class="d-none d-lg-block"
+            >Slate is designed for freelancers</span
+          >
         </h4>
       </div>
 
@@ -433,43 +512,92 @@
         class="d-flex w-100 social"
         style="max-width: 11.875rem; padding: 0.625rem; gap: 1.5rem"
       >
-        <a href="https://www.twitter.com/" target="_blank" aria-label="Siga-nos no Twitter">
-          <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/twitter.svg" alt="Logo do twitter"/>
+        <a
+          href="https://www.twitter.com/"
+          target="_blank"
+          aria-label="Siga-nos no Twitter"
+        >
+          <img
+            src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/twitter.svg"
+            alt="Logo do twitter"
+            width="42"
+            height="42"
+          />
         </a>
-        <a href="https://www.facebook.com/" target="_blank" aria-label="Siga-nos no Facebook">
-          <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/facebook.svg" alt="Logo do facebook"/>
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          aria-label="Siga-nos no Facebook"
+        >
+          <img
+            src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/facebook.svg"
+            alt="Logo do facebook"
+            width="42"
+            height="42"
+          />
         </a>
-        <a href="https://www.linkedin.com/" target="_blank" aria-label="Visite nosso perfil no LinkedIn">
-          <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/linkedin.svg" alt="Logo do linkedin"/>
+        <a
+          href="https://www.linkedin.com/"
+          target="_blank"
+          aria-label="Visite nosso perfil no LinkedIn"
+        >
+          <img
+            src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/linkedin.svg"
+            alt="Logo do linkedin"
+            width="42"
+            height="42"
+          />
         </a>
       </div>
 
-      <div class="gap-7 d-flex flex-lg-row flex-column info" style="padding: 1.125rem 0">
+      <div
+        class="gap-7 d-flex flex-lg-row flex-column info"
+        style="padding: 1.125rem 0"
+      >
         <div class="gap-7 d-flex flex-lg-column align-items-center">
-          <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/location.svg" alt="Icone de Localização" style="min-height: 2.1875rem;"/>
+          <img
+            src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/location.svg"
+            alt="Icone de Localização"
+            style="min-height: 2.1875rem"
+            width="27"
+            height="33"
+          />
           <h6 class="m-0" style="padding: 0.625rem">
-            <p>
-              6386 Spring St undefined Anchorage,
-            </p>
-            <p>
-              Georgia 12473 United States
-            </p>
+            <p>6386 Spring St undefined Anchorage,</p>
+            <p>Georgia 12473 United States</p>
           </h6>
         </div>
         <div class="gap-7 d-flex flex-lg-column align-items-center">
-          <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/cell.svg"  alt="Icone de Contato" style="min-height: 2.1875rem;"/>
+          <img
+            src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/cell.svg"
+            alt="Icone de Contato"
+            style="min-height: 2.1875rem"
+            width="22"
+            height="35"
+          />
           <h6 class="m-0" style="padding: 0.625rem">(843) 555-0130</h6>
         </div>
         <div class="gap-7 d-flex flex-lg-column align-items-center">
-          <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/mail.svg"  alt="Icone de email" style="min-height: 2.1875rem;"/>
+          <img
+            src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/mail.svg"
+            alt="Icone de email"
+            style="min-height: 2.1875rem"
+            width="28"
+            height="23"
+          />
           <h6 class="m-0" style="padding: 0.625rem">
             willie.jennings@example.com
           </h6>
         </div>
       </div>
 
-      <div class="justify-self-lg-center" id="map"  style="background-image: url('<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/map.webp?v=1');">
-      </div>
+      <div
+        class="justify-self-lg-center"
+        id="map"
+        style="
+          background-image: url('<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/map.webp?v=1');
+        "
+      ></div>
 
       <form action="" class="w-100 d-flex">
         <div class="contact__form d-grid w-100">
@@ -540,25 +668,59 @@
           </div>
         </div>
       </div>
-      <div
-        class="info text-white d-grid"
-        style="max-width: 24rem"
-      >
-        <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/location-dark.svg"  alt="Icone de Localização"/>
+      <div class="info text-white d-grid" style="max-width: 24rem">
+        <img
+          src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/location-dark.svg"
+          alt="Icone de Localização"
+          width="46"
+          height="46"
+        />
         <div class="p-2" style="justify-self: start">
           7480 Mockingbird Hill undefined
         </div>
-        <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/cell-dark.svg"  alt="Logo de celular" style="padding: 0.625rem 0" />
-        <div style="padding: 0.625rem; justify-self: start">(239) 555-0108</div>
-        <div class="social d-flex justify-self-lg-start">
-          <a href="http://www.twitter.com/" target="_blank" aria-label="Siga-nos no Twitter">
-            <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/twitter-dark.svg" alt="Logo do twitter"/>
+        <img
+          src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/cell-dark.svg"
+          alt="Logo de celular"
+          width="35"
+          height="35"
+        />
+        <div style="justify-self: start">(239) 555-0108</div>
+        <div class="social d-flex justify-self-lg-start py-10">
+          <a
+            href="http://www.twitter.com/"
+            target="_blank"
+            aria-label="Siga-nos no Twitter"
+          >
+            <img
+              src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/twitter-dark.svg"
+              alt="Logo do twitter"
+              width="41"
+              height="41"
+            />
           </a>
-          <a href="http://www.facebook.com/" target="_blank" aria-label="Siga-nos no Facebook">
-            <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/facebook-dark.svg" alt="Logo do facebook"/>
+          <a
+            href="http://www.facebook.com/"
+            target="_blank"
+            aria-label="Siga-nos no Facebook"
+          >
+            <img
+              src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/facebook-dark.svg"
+              alt="Logo do facebook"
+              width="41"
+              height="41"
+            />
           </a>
-          <a href="http://www.linkedin.com/" target="_blank"  aria-label="Visite nosso perfil no LinkedIn">
-            <img src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/linkedin-dark.svg" alt="Logo do linkedin"/>
+          <a
+            href="http://www.linkedin.com/"
+            target="_blank"
+            aria-label="Visite nosso perfil no LinkedIn"
+          >
+            <img
+              src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/linkedin-dark.svg"
+              alt="Logo do linkedin"
+              width="41"
+              height="41"
+            />
           </a>
         </div>
       </div>
