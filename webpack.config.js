@@ -2,9 +2,8 @@ const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = (env, argv) => {
   return {
@@ -41,9 +40,9 @@ module.exports = (env, argv) => {
             // Adicione os loaders nesta ordem
             // 'style-loader', // Transfere os estilos para o DOM
             MiniCssExtractPlugin.loader,
-            'css-loader', // Converte CSS para módulos CommonJS
-            'sass-loader' // Compila Sass para CSS
-          ]
+            "css-loader", // Converte CSS para módulos CommonJS
+            "sass-loader", // Compila Sass para CSS
+          ],
         },
       ],
     },
@@ -54,27 +53,34 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './src/index.html', // Arquivo HTML de origem (opcional)
+        template: "./src/index.html", // Arquivo HTML de origem (opcional)
         templateParameters: {
           // Defina suas variáveis aqui
-          title: 'Figma Land',
-          url: argv.mode === 'production'?'https://figmaland-five.vercel.app/':'',
+          title: "Figma Land",
+          inject: "body", // Injetar as tags de script no corpo do HTML
+          scriptLoading: "async", // Carregar os scripts de forma assíncrona
+          url:
+            argv.mode === "production"
+              ? "https://figmaland-five.vercel.app/"
+              : "",
         },
       }),
       // Plugin para converter arquivos PNG e JPEG para WebP
       new ImageminWebpWebpackPlugin({
-        config: [{
-          test: /\.(jpe?g|png)/,
-          options: {
-            quality:  100
-          }
-        }],
+        config: [
+          {
+            test: /\.(jpe?g|png)/,
+            options: {
+              quality: 100,
+            },
+          },
+        ],
         overrideExtension: true,
         detailedLogs: false,
         silent: false,
-        strict: true
+        strict: true,
       }),
-      
+
       new MiniCssExtractPlugin({
         filename: "styles.bundle.[contenthash].css", // Nome do arquivo CSS gerado
       }),
@@ -91,5 +97,5 @@ module.exports = (env, argv) => {
         ],
       }),
     ],
-  }
+  };
 };
