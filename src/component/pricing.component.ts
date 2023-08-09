@@ -22,13 +22,13 @@ class PricingComponent extends HTMLElement {
       className: ["d-flex", "flex-column", "align-items-center"],
       appendChild: [
         // titulo
-        BuilderElement("h3", {
-          className: ["d-flex", "flex-column", "align-items-center"],
+        BuilderElement("p", {
+          className: ["d-flex", "flex-column", "align-items-center", 'title=3'],
           innerText: args.title ?? "title",
         }),
         // subtitulo
-        BuilderElement("h6", {
-          className: ["m-0", "text-center"],
+        BuilderElement("p", {
+          className: ["m-0", "text-center", 'title-6'],
           innerText: args.subtitle ?? "subtitle",
         }),
       ],
@@ -57,8 +57,8 @@ class PricingComponent extends HTMLElement {
               />
               </svg>`,
             }),
-            BuilderElement("h6", {
-              className: ["m-0"],
+            BuilderElement("p", {
+              className: ["m-0", 'title-6'],
               innerText: "Per Month",
             }),
           ],

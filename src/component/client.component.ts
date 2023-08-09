@@ -24,8 +24,8 @@ class ClientComponent extends HTMLElement {
       width: args.width,
       height: args.height,
     });
-    const _title = BuilderElement('h6', {
-      className: ['text-center', 'm-0'],
+    const _title = BuilderElement('p', {
+      className: ['text-center', 'm-0', 'title-6'],
       innerText: args.title || 'Client Name'
     })
     const _container = BuilderElement('div', {
