@@ -213,38 +213,31 @@ video {
   /* Outros seletores e estilos que desejar aplicar no viewport maior ou igual a 998 pixels */
 }
 
-h1,
 p,
-h2,
-h4,
+.title-2,
+.title-4,
 input {
-  font-family: Graphik;
+  font-family: Graphik !important;
   padding: 0.625rem;
-  font-style: normal;
+  font-style: normal !important;
   letter-spacing: 0.0125rem;
   margin: 0 !important;
 }
 
 p,
-h2,
-h4,
+.title-2,
+.title-4,
 input {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
-h1 {
-  font-size: 74px;
-  font-weight: 700;
-  line-height: 74px;
-}
-
-h6 {
-  font-family: Graphik;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.4375rem;
-  letter-spacing: 0.00625rem;
+.title-6 {
+  font-family: Graphik !important;
+  font-size: 1rem !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 1.4375rem !important;
+  letter-spacing: 0.00625rem !important;
 }
 
 p {
@@ -257,25 +250,25 @@ nav {
   grid-template-columns: repeat(2, 1fr);
 }
 
-h2 {
-  font-size: 3rem;
-  line-height: 3.4375rem;
+.title-2 {
+  font-size: 3rem !important;
+  line-height: 3.4375rem !important;
 }
 
-h3 {
-  font-family: Graphik;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 28px;
-  letter-spacing: 0.1px;
-  padding: 0.625rem;
-  margin: 0;
+.title-3 {
+  font-family: Graphik !important;
+  font-size: 20px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 28px !important;
+  letter-spacing: 0.1px !important;
+  padding: 0.625rem !important;
+  margin: 0 !important;
 }
 
-h4 {
-  font-size: 1.75rem;
-  line-height: 2.5rem;
+.title-4 {
+  font-size: 1.75rem !important;
+  line-height: 2.5rem !important;
 }
 
 input {
@@ -341,7 +334,7 @@ textarea {
   font-style: normal;
 }
 
-.cleint__text__content h6 {
+.cleint__text__content .title-6 {
   color: var(--second-text);
   font-size: 10.144px;
   font-style: normal;
