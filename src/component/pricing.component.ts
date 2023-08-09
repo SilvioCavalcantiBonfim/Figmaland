@@ -84,7 +84,7 @@ class PricingComponent extends HTMLElement {
     const _bt = document.createElement('app-button');
     _bt.setAttribute('label', 'Order Now');
     _bt.setAttribute('className', 'w-100');
-    _bt.setAttribute('theme', (args.bg === '#2091F9')?'WHITE':'BLUE');
+    _bt.setAttribute('theme', (args.bg === 'BLUE')?'WHITE':'BLUE');
     _bt.style.width = '100%';
 
     //Cria o container principal
@@ -95,12 +95,10 @@ class PricingComponent extends HTMLElement {
         "flex-column",
         "w-100",
         "align-items-center",
-        "justify-content-center"
+        "justify-content-center",
+        (args.bg === 'BLUE')?'text-white':'text-black',
+        (args.bg === 'BLUE')?'bg-primary':'bg-white'
       ],
-      style: {
-        color: args.color ?? "#000000",
-        backgroundColor: args.bg ?? "#FFFFFF",
-      },
       appendChild: [_heading, _row, _list, _bt],
     });
 
