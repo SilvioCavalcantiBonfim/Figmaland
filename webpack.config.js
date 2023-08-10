@@ -12,10 +12,13 @@ module.exports = (env, argv) => {
       pricing: "./src/component/pricing.component.ts",
       client: "./src/component/client.component.ts",
       button: "./src/component/button.component.ts",
+      dropdown: "./src/action/dropdown.action.ts",
+      video: "./src/action/video.action.ts",
+      background: "./src/action/background.action.ts"
     },
     output: {
       path: path.resolve(__dirname, "dist"), // Pasta de saída para os arquivos do Webpack
-      filename: "[name].bundle.[contenthash].js", // Nome do arquivo de saída
+      filename: "[name].[contenthash].js", // Nome do arquivo de saída
     },
     resolve: {
       extensions: [".ts", ".js"], // Extensões que o Webpack deve resolver
@@ -82,7 +85,7 @@ module.exports = (env, argv) => {
       }),
 
       new MiniCssExtractPlugin({
-        filename: "styles.bundle.[contenthash].css", // Nome do arquivo CSS gerado
+        filename: "styles.[contenthash].css", // Nome do arquivo CSS gerado
       }),
       new CopyWebpackPlugin({
         patterns: [
