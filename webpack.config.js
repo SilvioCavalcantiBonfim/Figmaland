@@ -41,8 +41,8 @@ module.exports = (env, argv) => {
           test: /\.s[ac]ss$/i,
           use: [
             // Adicione os loaders nesta ordem
-            'style-loader', // Transfere os estilos para o DOM
-            // MiniCssExtractPlugin.loader,
+            // 'style-loader', // Transfere os estilos para o DOM
+            MiniCssExtractPlugin.loader,
             "css-loader", // Converte CSS para módulos CommonJS
             "sass-loader", // Compila Sass para CSS
           ],
