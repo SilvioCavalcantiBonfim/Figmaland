@@ -1,4 +1,4 @@
-import './css/main.scss';
+import './scss/main.scss';
 
 var dropdown = false;
 const background = document.getElementById("background");
