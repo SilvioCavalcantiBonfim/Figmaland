@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlCriticalPlugin = require("html-critical-webpack-plugin");
 
 module.exports = (env, argv) => {
   return {
@@ -57,16 +58,32 @@ module.exports = (env, argv) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "./src/index.html", // Arquivo HTML de origem (opcional)
+        inject: true, // Injetar as tags de script no corpo do HTML
         templateParameters: {
           // Defina suas variáveis aqui
           title: "Figma Land",
-          inject: "body", // Injetar as tags de script no corpo do HTML
           scriptLoading: "async", // Carregar os scripts de forma assíncrona
           url:
             argv.mode === "production"
               ? "https://figmaland-five.vercel.app/"
-              : "",
+              : "http://localhost:8080",
         },
+      }),
+      new MiniCssExtractPlugin({
+        filename: "styles.[contenthash].css", // Nome do arquivo CSS gerado
+      }),
+      new HtmlCriticalPlugin({
+        base: path.join(path.resolve(__dirname), 'dist/'),
+        src: 'index.html',
+        dest: 'index.html',
+        inline: true,
+        minify: true,
+        extract: true,
+        width: 375,
+        height: 565,
+        penthouse: {
+          blockJSRequests: true,
+        }
       }),
       // Plugin para converter arquivos PNG e JPEG para WebP
       new ImageminWebpWebpackPlugin({
@@ -82,10 +99,6 @@ module.exports = (env, argv) => {
         detailedLogs: false,
         silent: false,
         strict: true,
-      }),
-
-      new MiniCssExtractPlugin({
-        filename: "styles.[contenthash].css", // Nome do arquivo CSS gerado
       }),
       new CopyWebpackPlugin({
         patterns: [
