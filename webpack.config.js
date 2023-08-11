@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const HtmlCriticalPlugin = require("html-critical-webpack-plugin");
+const Critters = require('critters-webpack-plugin');
 
 module.exports = (env, argv) => {
   return {
@@ -72,18 +72,10 @@ module.exports = (env, argv) => {
       new MiniCssExtractPlugin({
         filename: "styles.[contenthash].css", // Nome do arquivo CSS gerado
       }),
-      new HtmlCriticalPlugin({
-        base: path.join(path.resolve(__dirname), 'dist/'),
-        src: 'index.html',
-        dest: 'index.html',
-        inline: true,
-        minify: true,
-        extract: true,
-        width: 375,
-        height: 565,
-        penthouse: {
-          blockJSRequests: true,
-        }
+      new Critters({
+        // Opções do webpack-critters aqui
+        preload: 'swap',
+        preloadFonts: true
       }),
       // Plugin para converter arquivos PNG e JPEG para WebP
       new ImageminWebpWebpackPlugin({
