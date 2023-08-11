@@ -9,7 +9,16 @@
     />
     <title><%= htmlWebpackPlugin.options.templateParameters.title %></title>
   </head>
-  <body>
+  <body onload="removeElement('load')" class="bg-body">
+    <!-- loading -->
+    <div id="load" class="z-3 d-flex flex-column justify-content-center align-items-center position-fixed min-vh-100 min-vw-100 bg-body">
+      <div class="position-relative m-30 d-flex justify-content-center align-items-center">
+        <div class="triangle flip-horizontal-bottom-object-1 position-absolute"></div>
+        <div class="symbol rounded-pill position-absolute flip-horizontal-bottom-object-2"></div>
+      </div>
+      <h1 class="title-4">Bem vindo ao Figmaland</h1>
+      <p class="title-6">Estamos preparando tudo</p>
+    </div>
     <!-- background -->
     <svg
       id="background"
@@ -49,15 +58,15 @@
     <!-- header e nav -->
     <header id="header">
       <nav class="d-grid container align-items-center">
-        <div class="d-lg-flex d-none gap-21">
-          <a href="#home" class="p-10 text-white text-decoration-none">Home</a>
-          <a href="#features" class="p-10 text-white text-decoration-none"
+        <div class="d-lg-flex d-none gap-7">
+          <a href="#home" class="hover position-relative rounded-pill px-21 p-10 text-white text-decoration-none">Home</a>
+          <a href="#features" class="hover position-relative rounded-pill px-21 p-10 text-white text-decoration-none"
             >Product</a
           >
-          <a href="#pricing" class="p-10 text-white text-decoration-none"
+          <a href="#pricing" class="hover position-relative rounded-pill px-21 p-10 text-white text-decoration-none"
             >Pricing</a
           >
-          <a href="#contact_us" class="p-10 text-white text-decoration-none"
+          <a href="#contact_us" class="hover position-relative rounded-pill px-21 p-10 text-white text-decoration-none"
             >Contact</a
           >
         </div>
@@ -82,6 +91,7 @@
             href="http://www.twitter.com/"
             target="_blank"
             aria-label="Siga-nos no Twitter"
+            class="hover position-relative rounded"
           >
             <img
               src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/twitter-dark.svg"
@@ -94,6 +104,7 @@
             href="http://www.facebook.com/"
             target="_blank"
             aria-label="Siga-nos no Facebook"
+            class="hover position-relative rounded"
           >
             <img
               src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/facebook-dark.svg"
@@ -106,6 +117,7 @@
             href="http://www.linkedin.com/"
             target="_blank"
             aria-label="Visite nosso perfil no LinkedIn"
+            class="hover position-relative rounded"
           >
             <img
               src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/linkedin-dark.svg"
@@ -181,8 +193,8 @@
       id="features"
     >
       <div class="d-flex flex-column mx-4 gap-7">
-        <h1 class="text text-center title-2">Features</h1>
-        <p class="second-text text-center title-4">
+        <h1 class="text-dark text-center title-2">Features</h1>
+        <p class="text-secondary text-center title-4">
           Most calendars are designed for teams.
         </p>
       </div>
@@ -194,7 +206,7 @@
             muted
             id="video__1"
             style="
-              box-shadow: 0px 2.6704981327056885px 20.696359634399414px 0px
+              box-shadow: 0 0.167rem 1.294rem 0
                 rgba(0, 0, 0, 0.15);
             "
           >
@@ -205,7 +217,7 @@
             <track src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/video.pt.vtt" kind="captions" srclang="pt" label="portuguese_captions">
           </video>
           <button
-            class="position-absolute bg-primary border-0 rounded-circle d-flex align-items-center justify-content-center"
+            class="position-absolute hover bg-primary border-0 rounded-circle d-flex align-items-center justify-content-center"
             style="width: 4rem; height: 4rem"
             aria-label="Botão de play do vídeo"
             id="button__play__1"
@@ -229,10 +241,10 @@
                 fill="currentcolor"
               />
             </svg>
-            <p class="text text-center m-0 title-3">
+            <p class="text-dark text-center m-0 title-3">
               OpenType features Variable fonts
             </p>
-            <p class="second-text text-center">
+            <p class="text-secondary text-center">
               Slate helps you see how many more days you need to work to reach
               your financial goal.
             </p>
@@ -249,8 +261,8 @@
               />
             </svg>
 
-            <p class="text text-center m-0 title-3">Design with real data</p>
-            <p class="second-text text-center">
+            <p class="text-dark text-center m-0 title-3">Design with real data</p>
+            <p class="text-secondary text-center">
               Slate helps you see how many more days you need to work to reach
               your financial goal.
             </p>
@@ -267,8 +279,8 @@
               />
             </svg>
 
-            <p class="text text-center m-0 title-3">Fastest way to take action</p>
-            <p class="second-text text-center">
+            <p class="text-dark text-center m-0 title-3">Fastest way to take action</p>
+            <p class="text-secondary text-center">
               Slate helps you see how many more days you need to work to reach
               your financial goal.
             </p>
@@ -317,7 +329,7 @@
     >
       <article class="align-self-lg-end">
         <p class="text-center text-lg-start title-3">At your fingertips</p>
-        <h1 class="text d-none d-lg-block title-2">Lightning fast prototyping</h2>
+        <h1 class="text-dark d-none d-lg-block title-2">Lightning fast prototyping</h2>
         <h1 class="text-center d-lg-none d-block title-2">Newsletter</h2>
         <p class="text-center d-lg-none d-block title-4">
           Most calendars are designed for teams. Slate is designed for
@@ -407,7 +419,7 @@
     >
       <h1 class="title-2">Testimonials</h1>
       <article
-        class="testimonial second-text d-flex flex-column align-items-center"
+        class="testimonial text-secondary d-flex flex-column align-items-center"
       >
         <img
           src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/logos/logos_ibm.svg"
@@ -450,7 +462,7 @@
     </section>
     <!-- pricing -->
     <section
-      class="container_2 gap-59 d-flex flex-column align-items-center dark-background"
+      class="container_2 gap-59 d-flex flex-column align-items-center bg-dark-background"
       id="pricing"
     >
       <div class="gap-7 text-white" style="max-width: 17.8125rem">
@@ -516,6 +528,7 @@
           href="https://www.twitter.com/"
           target="_blank"
           aria-label="Siga-nos no Twitter"
+          class="hover-black position-relative rounded"
         >
           <img
             src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/twitter.svg"
@@ -528,6 +541,7 @@
           href="https://www.facebook.com/"
           target="_blank"
           aria-label="Siga-nos no Facebook"
+          class="hover-black position-relative rounded"
         >
           <img
             src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/facebook.svg"
@@ -540,6 +554,7 @@
           href="https://www.linkedin.com/"
           target="_blank"
           aria-label="Visite nosso perfil no LinkedIn"
+          class="hover-black position-relative rounded"
         >
           <img
             src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/linkedin.svg"
@@ -624,7 +639,7 @@
     </section>
     <!-- footer -->
     <footer
-      class="container_2 gap-59 d-grid dark-background justify-content-center"
+      class="container_2 gap-59 d-grid bg-dark-background justify-content-center"
     >
       <div class="footer__container gap-72 d-grid">
         <div class="d-flex flex-column" style="gap: 1rem">
@@ -690,6 +705,7 @@
             href="http://www.twitter.com/"
             target="_blank"
             aria-label="Siga-nos no Twitter"
+            class="hover position-relative rounded"
           >
             <img
               src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/twitter-dark.svg"
@@ -702,6 +718,7 @@
             href="http://www.facebook.com/"
             target="_blank"
             aria-label="Siga-nos no Facebook"
+            class="hover position-relative rounded"
           >
             <img
               src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/facebook-dark.svg"
@@ -714,6 +731,7 @@
             href="http://www.linkedin.com/"
             target="_blank"
             aria-label="Visite nosso perfil no LinkedIn"
+            class="hover position-relative rounded"
           >
             <img
               src="<%= htmlWebpackPlugin.options.templateParameters.url %>/assets/icons/linkedin-dark.svg"
@@ -725,5 +743,12 @@
         </div>
       </div>
     </footer>
+    <script>
+      function removeElement(id) {
+        const element = document.getElementById(id);
+        element.classList.add('fade-out');
+        setTimeout(() => element.parentNode.removeChild(element), 1000);
+      }
+    </script>
   </body>
 </html>

@@ -1,7 +1,6 @@
 # Figma Land - Landing Page
 
-![html](https://img.shields.io/badge/-HTML-white?style=for-the-badge&logo=html5&color=E34F26&logoColor=white)
-![css](https://img.shields.io/badge/-CSS-white?style=for-the-badge&logo=css3&color=1572B6&logoColor=white)
+![sass](https://img.shields.io/badge/-SASS-white?style=for-the-badge&logo=SASS&color=CC6699&logoColor=white)
 ![Typescript](https://img.shields.io/badge/-TypeScript-white?style=for-the-badge&logo=typescript&color=3178C6&logoColor=white)
 ![bootstrap](https://img.shields.io/badge/-Bootstrap-white?style=for-the-badge&logo=bootstrap&color=7952B3&logoColor=white)
 ![figma](https://img.shields.io/badge/-Figma-white?style=for-the-badge&logo=figma&color=F24E1E&logoColor=white)
@@ -9,44 +8,40 @@
 ![nginx](https://img.shields.io/badge/-nginx-white?style=for-the-badge&logo=nginx&color=009639&logoColor=white)
 ![webpack](https://img.shields.io/badge/-webpack-white?style=for-the-badge&logo=webpack&color=8DD6F9&logoColor=white)
 
-Este projeto é uma landing page chamada Figma Land, criada com base em um modelo disponível no Figma. O objetivo desta landing page é mostrar os recursos e detalhes de um produto ou serviço de forma atraente e interativa. O projeto utiliza TypeScript, Webpack e Docker com Nginx para melhorar a experiência de desenvolvimento e implantação.
+Bem-vindo ao projeto Figma Land - Landing Page! Este repositório contém o código fonte e os recursos para a criação de uma página de destino moderna e responsiva. A página foi desenvolvida utilizando uma variedade de tecnologias, incluindo SASS, TypeScript, Bootstrap, Figma, Docker, NGINX e Webpack.
 
-## Modelo no Figma
+## Motivação
 
-O design completo desta landing page foi obtido de um modelo disponível no Figma, uma ferramenta poderosa para design e prototipagem de interfaces. Infelizmente, não sou o autor do modelo original. O crédito pelo design vai para o autor original do projeto no Figma.
+O projeto Figma Land teve seu início com um simples arquivo HTML, CSS e JavaScript, evoluindo ao longo do tempo à medida que novas tecnologias eram exploradas e implementadas. A motivação principal por trás desse projeto foi o estudo aprofundado das tecnologias envolvidas, com foco no aprimoramento das habilidades de desenvolvimento. A abordagem adotada foi a de escolher as tecnologias ao longo do processo de desenvolvimento, em vez de selecioná-las previamente.
 
-Você pode conferir o design completo desta landing page no Figma. Basta acessar o seguinte link:
+## Tecnologias e Melhorias
 
-[![figma](https://img.shields.io/badge/-Figma-white?style=for-the-badge&logo=figma&color=F24E1E&logoColor=white)](https://www.figma.com/community/file/827585162030328694)
+A Landing Page foi desenvolvida com acessibilidade e SEO em mente. Após a aquisição do modelo original, foram realizadas modificações para aprimorar esses aspectos. A página obteve uma nota perfeita de 100 em acessibilidade, práticas recomendadas e SEO, refletindo o comprometimento em criar uma experiência inclusiva e otimizada para os mecanismos de busca.
 
-## Como Usar o Projeto
+O desempenho é um foco contínuo neste projeto. Embora a página já tenha alcançado bons resultados, a busca por otimizações adicionais está em andamento. Já foram aplicados conceitos de carregamento assíncrono de scripts e folhas de estilo, cache de recursos e otimização de imagens para formatos modernos, utilizando o Webpack.
 
-Para utilizar este projeto, siga os passos abaixo:
+## Implementação e Execução
 
-1. Faça o download dos arquivos deste repositório ou clone o projeto usando o Git.
+Para executar o projeto localmente, siga as etapas abaixo:
+
+1. Clone este repositório em sua máquina local.
+2. Certifique-se de ter o Docker e o Docker Compose instalados.
+3. Navegue até o diretório raiz do projeto.
+4. Execute o seguinte comando para criar e executar o container:
 
 ```bash
-  git clone https://github.com/SilvioCavalcantiBonfim/Figmaland.git
+docker compose up
 ```
+Agora você pode acessar a Landing Page em seu navegador, através do endereço [http://localhost:8080](http://localhost:8080).
 
-2. Utilize o Docker Compose para criar os contêineres do projeto.
+## Deploy e Vercel
 
-```bash
-  docker compose up -d
-```
-
-Agora, o servidor Nginx estará executando o projeto Figma Land e você poderá acessá-lo através do endereço `http://localhost:3000` em seu navegador.
-
-## Contribuição
-
-Este projeto foi adaptado a partir de um modelo disponível no Figma e, como tal, não será aceita contribuição de código aqui. No entanto, se você tiver ideias ou melhorias para a landing page em si, fique à vontade para criar a sua própria versão a partir do modelo original do Figma.
+O deploy da Landing Page foi escolhido na plataforma Vercel devido à sua política de cache, que é mais adequada para garantir uma experiência de carregamento rápido e eficiente. Esta escolha contribui para a melhoria do desempenho da página em comparação com o GitHub Pages.
 
 ## Licença
 
-Este projeto está licenciado sob a [Licença MIT](LICENSE). Sinta-se à vontade para usá-lo e modificá-lo como desejar, desde que a licença seja respeitada.
+Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter mais informações.
 
-## Contato
+Observação: Este projeto não é de autoria original deste repositório. O modelo original foi adquirido e modificado para atender a critérios de acessibilidade, SEO e desempenho, conforme mencionado anteriormente.
 
-Se tiver alguma dúvida ou precisar de suporte com o projeto, você pode entrar em contato através do email [silviocavalcanti2011@gmail.com](mailto://silviocavalcanti2011@gmail.com).
-
-Esperamos que você aproveite o projeto Figma Land e que ele seja útil para o seu negócio ou projeto!
+Agradecemos por explorar o projeto Figma Land - Landing Page! Sinta-se à vontade para contribuir, abrir problemas ou fornecer feedback. Seja parte do nosso processo contínuo de aprimoramento e aprendizado tecnológico.

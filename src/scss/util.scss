@@ -1,10 +1,27 @@
 $primary: blue;
+$dark: #252B42;
+$secondary: #374754;
+$background: #18171D;
+$dark-background: #252B42;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "dark":       $dark,
+  "background": $background,
+  "dark-background": $dark-background
+);
 
 $spacer: 1rem;
 
 $spacers: (
-//px: space 
+  //px: space
   0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
   7: $spacer * 0.4375,
   10: $spacer * 0.625,
   16: $spacer,
@@ -12,7 +29,7 @@ $spacers: (
   21: $spacer * 1.3125,
   30: $spacer * 1.875,
   59: $spacer * 3.6875,
-  72: $spacer * 4.5,
+  72: $spacer * 4.5
 );
 
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";

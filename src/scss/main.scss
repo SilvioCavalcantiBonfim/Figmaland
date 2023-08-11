@@ -1,4 +1,3 @@
-@import 'variable';
 @import 'animation';
 @import 'font';
 @import 'util';
@@ -12,7 +11,7 @@ video {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  box-shadow: 0px 8.14769172668457px 63.14461135864258px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.509rem 3.947rem 0 rgba(0, 0, 0, 0.15);
 }
 
 /* ====================== geral ========================= */
@@ -59,12 +58,10 @@ video {
 
 .justify-self-end {
   justify-self: end;
-  align-self: self-end;
-  align-self: self-start;
 }
 
 /* lg >*/
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 62rem) {
   .justify-self-lg-center {
     justify-self: center;
   }
@@ -141,7 +138,7 @@ video {
   }
 
   footer {
-    grid-template-columns: auto 24rem;
+    grid-template-columns: auto minmax(auto, 24rem);
   }
 
   .footer__container {
@@ -204,8 +201,8 @@ video {
     width: 100% !important;
   }
   #map{
-    width: 516px;
-    height: 323.185px;
+    width: 32.25rem;
+    height: 20.199rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -257,11 +254,11 @@ nav {
 
 .title-3 {
   font-family: Graphik !important;
-  font-size: 20px !important;
+  font-size: 1.25rem !important;
   font-style: normal !important;
   font-weight: 700 !important;
-  line-height: 28px !important;
-  letter-spacing: 0.1px !important;
+  line-height: 1.75rem !important;
+  letter-spacing: 0.006rem !important;
   padding: 0.625rem !important;
   margin: 0 !important;
 }
@@ -272,16 +269,16 @@ nav {
 }
 
 input {
-  color: var(--background);
+  color: $background;
   border: 0.0625rem solid #E8E8E8;
   padding: 1rem 2.1875rem;
-  border-radius: 39px;
+  border-radius: 2.438rem;
   background: #F4F4F4;
   max-height: 3.375rem;
 }
 
 *::placeholder {
-  color: var(--background);
+  color: $background;
   font-family: 'Roboto', sans-serif;
   font-size: 0.875rem;
   font-style: normal;
@@ -291,7 +288,7 @@ input {
 }
 
 textarea {
-  border: 1px solid #E8E8E8;
+  border: thin solid #E8E8E8;
   background: #F5F5F5;
   padding: 1.4375rem 1.25rem;
   min-height: 12.375rem;
@@ -304,7 +301,7 @@ textarea {
   padding: 1.5625rem 2.5rem;
   gap: 1.875rem;
   max-width: 17.1875rem;
-  border: 1px solid #D8D8D8;
+  border: thin solid #D8D8D8;
 }
 
 .testimonial {
@@ -335,20 +332,20 @@ textarea {
 }
 
 .cleint__text__content .title-6 {
-  color: var(--second-text);
-  font-size: 10.144px;
+  color: $secondary;
+  font-size: 0.634rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 15.216px;
-  letter-spacing: 0.085px;
+  line-height: 0.951rem;
+  letter-spacing: 0.005rem;
 }
 
 .cleint__text__content p {
-  color: var(--text);
-  font-size: 12.68px;
+  color: $dark;
+  font-size: 0.793rem;
   font-weight: 400;
-  line-height: 22.824px;
-  letter-spacing: 0.169px;
+  line-height: 1.427rem;
+  letter-spacing: 0.011rem;
 }
 
 
@@ -357,27 +354,27 @@ textarea {
   padding: 2.5rem;
   border-radius: 0.625rem;
   gap: 1.875rem;
-  box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0.813rem 1.188rem 0 rgba(0, 0, 0, 0.07);
 }
 
 .contact__form {
   padding: 3.25rem 3.0625rem;
   gap: 2.8125rem;
-  box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0.813rem 1.188rem 0 rgba(0, 0, 0, 0.07);
   border-radius: 1.25rem;
   background: #FFF;
-  border: 1px solid #DDD;
+  border: thin solid #DDD;
 }
 
 .footer__menu__text {
   font-family: Graphik;
-  font-size: 15px;
+  font-size: 0.938rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 28px;
-  padding: 0 10px;
+  line-height: 1.75rem;
+  padding: 0 0.625rem;
   /* 186.667% */
-  letter-spacing: 0.2px;
+  letter-spacing: 0.013rem;
 }
 
 footer > .info {
@@ -397,4 +394,46 @@ footer > .info > .social,
 .social__media {
   padding: 1.25rem 0;
   gap: 1.5rem;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 2rem 3.463rem 2rem;
+  border-color: transparent transparent $primary transparent;
+}
+
+.symbol{
+  aspect-ratio: 71 / 23;
+  background: conic-gradient(from 0deg, #EB36B2, #BD40E2);
+  min-width: 4.438rem;
+}
+.hover-black,.hover{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hover-black::after,
+.hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: white;
+  opacity: 0.25;
+  border-radius: inherit;
+  transform: scale(0);
+  transition: all .2s ease-in-out;
+}
+.hover-black:hover::after,
+.hover:hover::after{
+  transform: scale(1);
+
+}
+
+.hover-black::after{
+  background-color: black;
+  opacity: 0.16;
 }

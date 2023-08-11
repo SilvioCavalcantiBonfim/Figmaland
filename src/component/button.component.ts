@@ -30,21 +30,21 @@ class ButtonComponent extends HTMLElement {
 
     var _class: string[] = themeColor[args.theme || 'BLUE'];
 
-    _class = _class.concat(['p-16', 'm-0', 'rounded-pill', 'text-center', 'border-0', 'w-100']);
+    _class = _class.concat(['p-16', 'm-0', 'rounded-pill', 'text-center', 'border-0', 'w-100', 'position-relative', args.theme === 'WHITE'?'hover-black':'hover']);
 
     if(args.className)
       _class = args.className.split(' ');
     // cria os elementos filhos do heading e o heading
     const _button = BuilderElement('button', {
       className: _class,
-      innerText: args.label,
       onclick: args.onclick,
       style: {
         letterSpacing: "0.0125rem",
         fontWeight: (args.try)?700:400,
         fontSize: "1.25rem",
         lineHeight: "1.25rem"
-      }
+      },
+      appendChild: [BuilderElement('span', {innerText: args.label, style: {zIndex: 2, position: 'relative'}})]
     });
 
     if (this.shadowRoot) {
