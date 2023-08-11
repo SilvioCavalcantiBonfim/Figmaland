@@ -16,8 +16,12 @@ class ButtonComponent extends HTMLElement {
 
   render(args: { [key: string]: any }) {
 
-    const styles = document.getElementsByTagName('link');
+    const link = document.getElementsByTagName('link');
+    if (link) this.shadowRoot?.appendChild(link[0].cloneNode(true));
+
+    const styles = document.getElementsByTagName('style');
     if (styles) this.shadowRoot?.appendChild(styles[0].cloneNode(true));
+    
 
     const themeColor: { [k: string]: string[] } = {
       'BLUE': ['bg-primary', 'text-white'],

@@ -15,8 +15,11 @@ class ClientComponent extends HTMLElement {
   }
 
   render(args: { [key: string]: any }) {
-    const styles = document.getElementsByTagName('link');
+    const link = document.getElementsByTagName('link');
+    if (link) this.shadowRoot?.appendChild(link[0].cloneNode(true));
+    const styles = document.getElementsByTagName('style');
     if (styles) this.shadowRoot?.appendChild(styles[0].cloneNode(true));
+
     // cria os elementos filhos do heading e o heading
     const _img = BuilderElement('img', {
       src: args.src,
